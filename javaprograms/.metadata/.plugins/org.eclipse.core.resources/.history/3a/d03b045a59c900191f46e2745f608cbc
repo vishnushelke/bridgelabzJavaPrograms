@@ -1,0 +1,12 @@
+package task;
+import java.io.*;
+import java.util.Scanner;
+public class ReadFromFIle {
+
+	public static void main(String[] args)throws Exception {
+		File file=new File("/home/admin1/Desktop");
+	Scanner sc=new Scanner(System.in);
+	
+	}
+
+}

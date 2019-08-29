@@ -1,0 +1,33 @@
+package com.bridgelabz.functional;
+
+public class MathFunction {
+	
+	public static double Harmonic(int n)
+	{
+		double H=0.0;
+		for(int i=1;i<=n;i++)
+		{
+			H+=1/n;
+		}
+		return H;
+	}
+	
+	public static double SineOfAngle(int angle)
+	{
+		double r=Math.toRadians(angle);
+		double sine=Math.sin(r);
+		return sine;
+	}
+	
+	public static double CosineOfAngle(int angle)
+	{
+		double r=Math.toRadians(angle);
+		double cosine=Math.cos(r);
+		return cosine;
+	}
+
+	public static void main(String[] args) {
+		
+	}
+
+}

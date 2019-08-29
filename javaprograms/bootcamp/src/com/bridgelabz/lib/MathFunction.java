@@ -1,0 +1,41 @@
+package com.bridgelabz.lib;
+
+import com.bridgelabz.utility.Utility;
+public class MathFunction {
+	
+	
+	
+	public static void main(String[] args) {
+		
+		double z=0.0;
+		
+		Utility.Harmonic(4);
+		System.out.println(z);
+		
+		double s=0.0;
+		Utility.SineOfAngle(45);
+		System.out.println(s);
+
+		double c=0.0;
+		Utility.CosineOfAngle(45);
+		System.out.println(c);
+		
+		Utility.Binary(14);
+				
+		Utility.Futurevalue(100,4,5);
+		
+		Utility.sqrt(16);
+				
+		Utility.isPrime(13);
+				
+		Utility.factorial(4);
+		
+		Utility.PresentValue(600,4,5);
+		
+		int a[]= {1,5,8,2,3,9,5};
+		Utility.MaxAndMin(a);
+		
+		Utility.CheckCollinearUsingSlope(0,0,1,1,2,2,4,8);
+	}
+
+}

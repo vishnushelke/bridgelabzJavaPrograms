@@ -1,0 +1,37 @@
+package com.bridgelabz.functional;
+import java.util.Scanner;
+import java.lang.Math;
+public class DayOfWeek {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the Year");
+		int y=sc.nextInt();
+		
+		System.out.println("Enter the Month");
+		int m=sc.nextInt();
+		
+		System.out.println("enter the date");
+		int d=sc.nextInt();
+		
+		double y0=y-(14-m)/12;
+		double x=y0+(y0/4)-y0/100+y0/400;
+		double m0=m+12*((14-m)/12)-2;
+		double d0=(d+x+31*m0/12)*(Mod1(7));
+		
+		
+		}
+
+
+	public static int Mod1(int i) {
+		// TODO Auto-generated method stub
+		if(i<0)
+		{
+			return -i;
+		}
+		
+		else
+			return i;
+	}
+	
+}

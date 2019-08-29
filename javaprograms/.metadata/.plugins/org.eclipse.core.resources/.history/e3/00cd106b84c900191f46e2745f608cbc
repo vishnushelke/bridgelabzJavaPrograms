@@ -1,0 +1,35 @@
+package task;
+//import javafx.util.Pair;
+import com.bridgelabz.utility.Utility;
+
+public class FrequencyCount {
+	
+	
+	
+	public static void FQ(String a[])
+	{
+		Utility.WordSort(a);
+		int n=a.length;
+		int count=1;
+		for(int i=0;i<n;)
+		{
+			for(int j=i+1;j<n;j++)
+			{
+				if(a[i].equals(a[j]))
+				{
+					count++;
+				}
+			}
+			System.out.print(a[i]+count);
+		}
+		
+		for(int i=0;i<n;i++)
+			
+	}
+
+	public static void main(String[] args) {
+	
+		String a[]= {"a","b","c","d","a","b"};
+		FQ(a);
+	}
+}

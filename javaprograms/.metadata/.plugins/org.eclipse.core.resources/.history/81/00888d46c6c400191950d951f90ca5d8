@@ -1,0 +1,22 @@
+package com.bridgelabz.functional;
+import java.util.*;
+public class BLRandom {
+	
+	public static void setSeed(long seed)
+	{
+		long s=1;
+		seed=s;
+	}
+	
+	public static int uniform(int n)
+	{
+		Random random=new Random();
+		if(n<0) throw new IllegalArgumentException("Argument must be positive");
+		else return random.nextInt(n);
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}

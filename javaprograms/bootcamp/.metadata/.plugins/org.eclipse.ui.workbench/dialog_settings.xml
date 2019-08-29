@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.internal.QuickAccess">
+		<item key="dialogHeight" value="612"/>
+		<item key="dialogWidth" value="823"/>
+		<list key="orderedElements">
+			<item value="org.eclipse.jdt.ui.JavaPerspective"/>
+		</list>
+		<list key="orderedProviders">
+			<item value="org.eclipse.ui.perspectives"/>
+		</list>
+		<list key="textEntries">
+			<item value="1"/>
+		</list>
+		<list key="textArray">
+			<item value="per"/>
+		</list>
+	</section>
+	<section name="ImportExportAction">
+	</section>
+	<section name="NewWizardAction">
+	</section>
+</section>

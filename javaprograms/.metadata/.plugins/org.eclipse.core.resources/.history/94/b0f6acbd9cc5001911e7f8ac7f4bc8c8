@@ -1,0 +1,42 @@
+package com.bridgelabz.functional;
+import java.util.Scanner;
+
+import com.bridgelabz.utility.Utility;
+public class MathFunction {
+	
+	
+	
+	public static void main(String[] args) {
+		
+		double z=0.0;
+		Utility utility=new Utility();
+		z=utility.Harmonic(4);
+		System.out.println(z);
+		
+		double s=0.0;
+		s=utility.SineOfAngle(45);
+		System.out.println(s);
+
+		double c=0.0;
+		c=utility.CosineOfAngle(45);
+		System.out.println(c);
+		
+		utility.Binary(14);
+				
+		utility.Futurevalue(100,4,5);
+		
+		utility.sqrt(16);
+				
+		utility.isPrime(13);
+				
+		utility.factorial(4);
+		
+		utility.PresentValue(600,4,5);
+		
+		int a[]= {1,5,8,2,3,9,5};
+		utility.MaxAndMin(a);
+		
+		utility.CheckCollinearUsingSlope(0,0,1,1,2,2,4,8);
+	}
+
+}

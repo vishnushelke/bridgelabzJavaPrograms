@@ -1,0 +1,216 @@
+package task;
+import java.util.Scanner;
+import java.util.Random;
+public class TicToeGame {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int x=8;
+		
+		String  a[][]=new String[3][3];
+		
+		
+		
+		
+		//1	
+			System.out.println("Enter row number m and column number n to insert x");
+			int m=sc.nextInt();
+			int n=sc.nextInt();
+			if(a[m][n]=="X")
+			{
+				System.out.println("this space is not empty");
+
+			}
+			else a[m][n]="X";
+			
+			for(int i=0;i<3;i++)
+			{
+				for(int j=0;j<3;j++)
+				{
+					
+					
+					if(a[i][j]!="X") a[i][j]="0";
+					System.out.print(" "+a[i][j]+" ");
+				}
+				System.out.println();
+			}
+			System.out.println();
+			Random rand=new Random();
+			m=rand.nextInt(3);
+			n=rand.nextInt(3);
+			if(a[m][n]=="X")
+				{
+					m=rand.nextInt(3);
+					n=rand.nextInt(3);
+				}
+			else a[m][n]="X";
+			for(int i=0;i<3;i++) {
+			for(int j=0;j<3;j++)
+			{
+	
+				if(a[i][j]!="X") a[i][j]="0";
+				
+				
+				
+				System.out.print(" "+a[i][j]+" ");
+			}
+			System.out.println();
+			}
+			//2
+			System.out.println("Enter row number m and column number n to insert x");
+			m=sc.nextInt();
+			n=sc.nextInt();
+			if(a[m][n]=="X")
+			{
+				System.out.println("this space is not empty");
+
+			}
+			else a[m][n]="X";
+			
+			for(int i=0;i<3;i++)
+			{
+				for(int j=0;j<3;j++)
+				{
+					
+					
+					if(a[i][j]!="X") a[i][j]="0";
+					System.out.print(" "+a[i][j]+" ");
+				}
+				System.out.println();
+			}
+			System.out.println();
+			
+			m=rand.nextInt(3);
+			n=rand.nextInt(3);
+			if(a[m][n]=="X")
+				{
+					m=rand.nextInt(3);
+					n=rand.nextInt(3);
+				}
+			else a[m][n]="X";
+			for(int i=0;i<3;i++) {
+			for(int j=0;j<3;j++)
+			{
+	
+				if(a[i][j]!="X") a[i][j]="0";
+				
+				
+				else a[i][j]="0";
+				System.out.print(" "+a[i][j]+" ");
+			}
+			System.out.println();
+			}
+			//3
+			System.out.println("Enter row number m and column number n to insert x");
+			m=sc.nextInt();
+			n=sc.nextInt();
+			if(a[m][n]=="X")
+			{
+				System.out.println("this space is not empty");
+
+			}
+			else a[m][n]="X";
+			
+			for(int i=0;i<3;i++)
+			{
+				for(int j=0;j<3;j++)
+				{
+					
+					
+					if(a[i][j]!="X") a[i][j]="0";
+					System.out.print(" "+a[i][j]+" ");
+				}
+				System.out.println();
+			}
+			System.out.println();
+			
+			m=rand.nextInt(3);
+			n=rand.nextInt(3);
+			if(a[m][n]=="X")
+				{
+					m=rand.nextInt(3);
+					n=rand.nextInt(3);
+				}
+			else a[m][n]="X";
+			for(int i=0;i<3;i++) {
+			for(int j=0;j<3;j++)
+			{
+	
+				if(a[i][j]!="X") a[i][j]="0";
+				
+				
+				else a[i][j]="0";
+				System.out.print(" "+a[i][j]+" ");
+			}
+			System.out.println();
+			}
+			//4
+			System.out.println("Enter row number m and column number n to insert x");
+			m=sc.nextInt();
+			n=sc.nextInt();
+			if(a[m][n]=="X")
+			{
+				System.out.println("this space is not empty");
+
+			}
+			else a[m][n]="X";
+			
+			for(int i=0;i<3;i++)
+			{
+				for(int j=0;j<3;j++)
+				{
+					
+					
+					if(a[i][j]!="X") a[i][j]="0";
+					System.out.print(" "+a[i][j]+" ");
+				}
+				System.out.println();
+			}
+			System.out.println();
+			
+			m=rand.nextInt(3);
+			n=rand.nextInt(3);
+			if(a[m][n]=="X")
+				{
+					m=rand.nextInt(3);
+					n=rand.nextInt(3);
+				}
+			else a[m][n]="X";
+			for(int i=0;i<3;i++) {
+			for(int j=0;j<3;j++)
+			{
+	
+				if(a[i][j]!="X") a[i][j]="0";
+				
+				
+				else a[i][j]="0";
+				System.out.print(" "+a[i][j]+" ");
+			}
+			System.out.println();
+			}
+			//5
+			System.out.println("Enter row number m and column number n to insert x");
+			m=sc.nextInt();
+			n=sc.nextInt();
+			if(a[m][n]=="X")
+			{
+				System.out.println("this space is not empty");
+
+			}
+			else a[m][n]="X";
+			
+			for(int i=0;i<3;i++)
+			{
+				for(int j=0;j<3;j++)
+				{
+					
+					
+					if(a[i][j]!="X") a[i][j]="0";
+					System.out.print(" "+a[i][j]+" ");
+				}
+				System.out.println();
+			}
+			System.out.println();
+	}
+
+}

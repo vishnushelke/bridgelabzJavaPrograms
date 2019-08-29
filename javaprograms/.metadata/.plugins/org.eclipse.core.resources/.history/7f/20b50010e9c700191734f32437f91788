@@ -1,0 +1,19 @@
+package task;
+
+public class OldMcDonald {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String x= "old MacDonald had a farm,\nE-I-E-O,\nAnd on his far he had some ANIMAL,\nE-I-E-O,\nWith a SOUND, SOUND here,\nAnd a SOUND, SOUND there,\nHere a SOUND, there a SOUND,\nEverywhere a SOUND SOUND";
+		//System.out.println(x);
+		String x1=x.replaceAll("ANIMAL", "Chicks");
+		String x2=x1.replaceAll("SOUND", "chick");
+		System.out.println(x2);
+		
+		String x3=x2.replaceAll("Chicks", "Ducks"); 
+		String x4=x3.replaceAll("SOUND", "quack")
+	}
+
+}
+
+

@@ -1,0 +1,37 @@
+package task;
+import java.util.Random;
+public class RandomBirthday {
+
+	public static void main(String[] args) {
+		Random rand=new Random();
+		int a=0,b=0,c=0,d=0,e=0,f=0,g=0,h=0,i=0,j=0,k=0,l=0;
+		int arr[][]=new int[3][];
+		for(int n=0;i<50;i++)
+		{
+			int y=rand.nextInt(2)+1993;
+			int m=rand.nextInt(12)+1;
+			int da=rand.nextInt(28)+1;
+			
+			switch(m)
+			{
+			case 1:a++;break;
+			case 2:b++;break;
+			case 3:c++;break;
+			case 4:d++;break;
+			case 5:e++;break;
+			case 6:f++;break;
+			case 7:g++;break;
+			case 8:h++;break;
+			case 9:i++;break;
+			case 10:j++;break;
+			case 11:k++;break;
+			case 12:l++;break;
+			
+			}
+			
+			System.out.println(d+"/"+m+"/"+y);
+		}
+
+	}
+
+}

@@ -1,0 +1,13 @@
+package com.bridgelabz.functional;
+import java.util.concurrent.TimeUnit;
+public class StopWatch {
+
+	public static void main(String[] args) throws InterruptedException {
+		long starttime=System.nanoTime();
+		//TimeUnit.SECONDS.sleep(5);
+		long endtime=System.nanoTime();
+		long timeElapsed=endtime-starttime;
+		System.out.println("running time of program is "+timeElapsed);
+	}
+
+}

@@ -1,0 +1,18 @@
+package com.bridgelabz.functional;
+import java.io.FileReader;
+
+		public class Study { 
+
+		    public static void main(String[] args)throws Exception { 
+		  FileReader r=new FileReader("/home/admin1/Desktop");
+		  int i=r.read();
+		  if(i!=-1)
+		  {
+			  System.out.println((char)i);
+		  }
+	   }
+		
+
+	}
+
+

@@ -1,0 +1,19 @@
+package task;
+
+public class PrimeNumbersUpto1000 {
+
+	public static void main(String[] args) {
+	int a[][]=new int[10][];
+	int x=0,y=0;
+		for(int i=2;i<101;i++)
+		{
+			for(int j=2;j<i/2;j++)
+			{
+				if((i%j==0)) x=1;
+			}
+			if(x==0) {a[0][y]=i;}
+		}
+		System.out.print(a[0][0]);
+	}
+
+}

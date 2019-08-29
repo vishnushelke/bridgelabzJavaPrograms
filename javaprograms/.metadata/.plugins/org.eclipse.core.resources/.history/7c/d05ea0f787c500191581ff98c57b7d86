@@ -1,0 +1,19 @@
+package com.bridgelabz.functional;
+import java.util.Scanner;
+public class Sqrt {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the number");
+		double n=sc.nextDouble();
+		
+		double epsilon=1e-15;
+		double t=n;
+		while(Math.abs(t-(n/t))>epsilon*t)
+		{
+			t=((n/t)+t)/2;
+		}
+		
+	}
+
+}

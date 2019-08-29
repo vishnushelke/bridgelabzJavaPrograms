@@ -1,0 +1,46 @@
+package com.bridgelabz.functional;
+public class SecondLargestandSmallest {
+
+	public static void main(String[] args) {
+		int a[]= {10,30,24,45,22,9};
+		int max=a[0];
+		int secmax=a[0];
+		int min=a[0];
+		int secmin=a[0];
+		
+		for(int i=1;i<6;i++)
+		{
+			if(max<a[i])
+			{
+				secmax=max;
+				max=a[i];
+			}
+			
+
+		}
+		System.out.println("Second largest number is "+secmax);
+		
+		
+		for(int i=1;i<6;i++)
+		{
+			if(min==a[i])
+			{
+				secmin=min;			
+			}
+			else if(a[i]>min && a[i-1]>secmin)
+			{
+				secmin=a[i];
+				
+			}
+			//else if()
+			//{
+				//secmin=a[i];
+			
+			//}
+
+		}
+		System.out.println("second minimum is"+secmin);
+		
+	}
+
+}

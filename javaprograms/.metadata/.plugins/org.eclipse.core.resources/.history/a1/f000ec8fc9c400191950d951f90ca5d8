@@ -1,0 +1,47 @@
+package com.bridgelabz.functional;
+import java.util.*;
+public class BLRandom {
+	
+	public static void setSeed(long seed)
+	{
+		long s=1;
+		seed=s;
+	}
+	
+	public static int uniform(int n)
+	{
+		Random random=new Random();
+		if(n<0) throw new IllegalArgumentException("Argument must be positive");
+		else return random.nextInt(n-1);
+	}
+	
+	public static double uniform1(double lo,double hi)
+	{
+		if(!(lo<hi)) throw new IllegalArgumentException("Range is invalid");
+		else {
+			Random rand=new Random();
+			return rand.nextDouble()*(hi-lo);
+		}
+	}
+
+	public static boolean bernoulli(double p)
+	{
+		if(p>=1 || p<=0)throw new IllegalArgumentException("Probability must lie between 0 and 1");
+		else return true;
+	}
+	
+	public static double gaussian()
+	{
+		double r, x, y;
+        do {
+            x = uniform1(-1.0, 1.0);
+            y = uniform1(-1.0, 1.0);
+            r = x*x + y*y;
+        } while (r >= 1 || r == 0);
+        return x * Math.sqrt(-2 * Math.log(r) / r);
+	}
+	public static void main(String[] args) {
+		
+	}
+
+}

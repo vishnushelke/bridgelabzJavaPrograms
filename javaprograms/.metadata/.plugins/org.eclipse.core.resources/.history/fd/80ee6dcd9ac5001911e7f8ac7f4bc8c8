@@ -1,0 +1,28 @@
+package com.bridgelabz.functional;
+import java.util.Random;
+import java.util.concurrent.TimeUnit;
+public class StopWatch {
+	
+	public static long start()
+	{
+		long starttime=System.nanoTime();
+		return starttime;
+	}
+
+	
+	public static void end(long starttime)
+	{
+		long endtime=System.nanoTime();
+		long timeElapsed=endtime-starttime;
+		System.out.println("Running Time of Program is ="+timeElapsed+" NanoSeconds");
+	}
+	public static void main(String[] args) throws InterruptedException {
+		start();
+		Random r= new Random();
+		int a=r.nextInt(6)+1;
+		int b=r.nextInt(6)+1;
+		System.out.println("reuired addition is "+(a+b));
+		end(start());
+	}
+
+}

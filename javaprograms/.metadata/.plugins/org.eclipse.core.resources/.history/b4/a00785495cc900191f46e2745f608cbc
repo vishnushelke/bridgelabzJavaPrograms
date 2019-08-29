@@ -1,0 +1,30 @@
+package task;
+import java.util.Scanner;
+public class Study {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		int a[]=new int[32];
+		for (int i=0;i<32;i++)
+		{
+			a[i]=0;
+		}
+		System.out.println("Enter the Number");
+		int n=sc.nextInt();
+		int temp=0,i=0;
+		while(n>0)
+		{
+			
+			temp=n%2;
+			n=n/2;
+			a[i]=temp;
+			i++;
+		}
+		for (int j=0;j<32;j++)
+		{
+			System.out.println(a[j]);
+		}
+	}
+
+}

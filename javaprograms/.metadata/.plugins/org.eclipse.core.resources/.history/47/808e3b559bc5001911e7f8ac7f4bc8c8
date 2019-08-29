@@ -1,0 +1,14 @@
+package com.bridgelabz.functional;
+
+public class Stopwatch1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		long starttime=System.nanoTime();
+		//TimeUnit.SECONDS.sleep(5);
+		long endtime=System.nanoTime();
+		long timeElapsed=endtime-starttime;
+		System.out.println("running time of program is "+timeElapsed+"nano seconds");
+	}
+
+}

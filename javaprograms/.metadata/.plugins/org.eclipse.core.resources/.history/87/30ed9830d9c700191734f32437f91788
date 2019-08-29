@@ -1,0 +1,28 @@
+package task;
+
+import org.w3c.dom.css.Counter;
+
+import com.bridgelabz.utility.Utility;
+
+public class FrequencyCount {
+	
+	public static void FQ(String a[])
+	{
+		Utility.WordSort(a);
+		Counter count[]=new Counter[a.length];
+		int m=0;
+		for(int i=0;i<a.length;i++)
+		{
+			if(i==0 || !(a[i].equals(a[i-1])))
+			{
+				
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		String x= "old MacDonald had a farm \n vishnu";
+		System.out.println(x);
+	}
+
+}
