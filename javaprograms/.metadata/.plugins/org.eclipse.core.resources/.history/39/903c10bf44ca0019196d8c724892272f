@@ -1,0 +1,80 @@
+package task;
+import java.util.Random;
+public class RandomBirthday {
+
+	public static void main(String[] args) {
+		Random rand=new Random();
+		int a=0,b=0,c=0,d=0,e=0,f=0,g=0,h=0,i=0,j=0,k=0,l=0;
+		String arr[][]=new String[12][];
+		
+		for(int n=0;n<50;n++)
+		{
+			int y=rand.nextInt(2)+1993;
+			int m=rand.nextInt(12)+1;
+			int da=rand.nextInt(28)+1;
+			
+			int counter[]=new int[12];
+			
+			switch(m)
+			{
+			case 1:counter[0]++;break;
+			case 2:counter[1]++;break;
+			case 3:counter[2]++;break;
+			case 4:counter[3]++;break;
+			case 5:counter[4]++;break;
+			case 6:counter[5]++;break;
+			case 7:counter[6]++;break;
+			case 8:counter[7]++;break;
+			case 9:counter[8]++;break;
+			case 10:counter[9]++;break;
+			case 11:counter[10]++;break;
+			case 12:counter[11]++;break;
+			default:System.out.println("invalid month");
+			}
+			
+			
+			arr[0]=new String[counter[0]];
+			arr[1]=new String[counter[1]];
+			arr[2]=new String[counter[2]];
+			arr[3]=new String[counter[3]];
+			arr[4]=new String[counter[4]];
+			arr[5]=new String[counter[5]];
+			arr[6]=new String[counter[6]];
+			arr[7]=new String[counter[7]];
+			arr[8]=new String[counter[8]];
+			arr[9]=new String[counter[9]];
+			arr[10]=new String[counter[10]];
+			arr[11]=new String[counter[11]];
+			
+			a=0;b=0;c=0;d=0;e=0;f=0;g=0;h=0;i=0;j=0;k=0;l=0;
+			switch(m)
+			{
+			case 1:arr[0][a]=(da+"/"+m+"/"+y)+arr[0];a++;break;
+			case 2:arr[1][b]=(da+"/"+m+"/"+y)+arr[1];b++;break;
+			case 3:arr[2][c]=(da+"/"+m+"/"+y)+arr[2];c++;break;
+			case 4:arr[3][d]=(da+"/"+m+"/"+y)+arr[3];d++;break;
+			case 5:arr[4][e]=(da+"/"+m+"/"+y)+arr[4];e++;break;
+			case 6:arr[5][f]=(da+"/"+m+"/"+y)+arr[5];f++;break;
+			case 7:arr[6][g]=(da+"/"+m+"/"+y)+arr[6];g++;break;
+			case 8:arr[7][h]=(da+"/"+m+"/"+y)+arr[7];h++;break;
+			case 9:arr[8][i]=(da+"/"+m+"/"+y)+arr[8];i++;break;
+			case 10:arr[9][j]=(da+"/"+m+"/"+y)+arr[9];j++;break;
+			case 11:arr[10][k]=(da+"/"+m+"/"+y)+arr[10];k++;break;
+			case 12:arr[11][l]=(da+"/"+m+"/"+y)+arr[11];l++;break;
+			default:System.out.println("invalid month");break;
+			}
+			//System.out.println(da+"/"+m+"/"+y);
+		}
+		for(i=0;i<12;i++)
+		{
+			for(j=0;j<arr[i].length;j++)
+			{
+				System.out.println(arr[i][j]);
+			}
+			System.out.println();
+		}
+		
+
+	}
+
+}
