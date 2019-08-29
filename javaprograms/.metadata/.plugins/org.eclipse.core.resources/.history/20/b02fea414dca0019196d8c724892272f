@@ -36,7 +36,7 @@ public class RandomBirthday {
 		}
 		for(int i=0;i<12;i++)
 		{
-			System.out.println("Birthdays in month "+(i+1)+" are"+arr[i]+" ");
+			System.out.println("Birthdays in month "+(i+1)+" are "+arr[i]+" ");
 		}
 	}
 
