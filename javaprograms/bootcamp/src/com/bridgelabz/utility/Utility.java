@@ -1,5 +1,7 @@
 package com.bridgelabz.utility;
 
+
+
 public class Utility {
 	public static void Distance(double x, double y)
 	{
@@ -218,4 +220,6 @@ public class Utility {
 		System.out.println(b);
 	}
 
+	
+		
 }
