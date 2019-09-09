@@ -13,7 +13,7 @@ public class HarmonicNumber {
 			double x=1/i;
 			H=H+x;
 		}
-		System.out.println("Required nth Harmonic number is "+H);
+		System.out.println("Required "+(int)n+"th Harmonic number is "+H);
 		sc.close();
 	}
 
