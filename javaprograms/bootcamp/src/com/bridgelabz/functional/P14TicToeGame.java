@@ -31,7 +31,7 @@ public class P14TicToeGame {
 		}
 		return false;
 	}
-
+	
 	public static void show(char [][] a)
 	{
 		for (int i = 0; i < 3; i++) {
