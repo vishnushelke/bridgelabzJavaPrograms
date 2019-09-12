@@ -16,16 +16,16 @@ public class P9MergeSort {
 		//Saving elements into temp arrays
 		for(int i=0;i<n1;i++)
 		{
-			L[i]=a[i];
+			L[i]=a[li+i];
 		}
-		for (int i = 0; i < n2; i++) {
-			R[i]=a[mi+i+1];
+		for (int j = 0; j < n2; j++) {
+			R[j]=a[mi+j+1];
 		}
 		
 		//indexes of two subarrays
 		int i=0,j=0;
 		//index of a merged array
-		int k=0;
+		int k=li;
 		while(i<n1 && j<n2)
 		{
 			if(L[i]<=R[j])
@@ -56,9 +56,9 @@ public class P9MergeSort {
 		}
 	}
 	
-	public static int[] sort(int[] a,int li,int hi)
+	public static void sort(int[] a,int li,int hi)
 	{
-		while(li<hi)
+		if(li<hi)
 		{
 			int mi=(li+hi)/2;
 			//sorting 2 subarrays
@@ -66,7 +66,7 @@ public class P9MergeSort {
 			sort(a,mi+1,hi);
 			Merge(a,li,mi,hi);
 		}
-		return a;
+		
 	}
 	
 	public static void display(int[] a)
@@ -80,12 +80,11 @@ public class P9MergeSort {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] a= {25,12,8,15,34};
+		//display(a);
+		
+		sort(a,0,a.length-1);
+		
 		display(a);
-		int li=0;
-		int hi=a.length-1;
-		
-		
-		display(sort(a,li,hi));
 	}
 
 }
