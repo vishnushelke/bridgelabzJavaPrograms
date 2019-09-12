@@ -1,8 +1,8 @@
-package task;
+package com.bridgelabz.functional;
 import java.util.Scanner;
 import java.util.Random;
 import java.lang.Math;
-public class TicToeGame {
+public class P14TicToeGame {
 	
 	public static boolean isWin(char[][] a)
 	{
