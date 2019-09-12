@@ -235,13 +235,6 @@ public class Utility {
 				}
 			}
 		}
-		System.out.println();
-		for(int i=0;i<n;i++)
-			System.out.print(a[i]+" ");
-		System.out.println();
-		
-		System.out.println("Enter the number you want to search");
-		
 		
 		int li=0;
 		int hi=n-1;
@@ -268,8 +261,21 @@ public class Utility {
 	public static void binaryWordSearch(String[] a,String search) 
 	{
 		int n=a.length;
-		int li=0,hi=n-1,mi=(li+hi)/2,x=0;
 		String temp="";
+		for (int i = 0; i < a.length; i++) {
+			for (int j = i+1; j < a.length; j++) {
+				if(a[i].compareTo(a[j])>0)
+				{
+					temp=a[i];
+					a[i]=a[j];
+					a[j]=temp;
+				}
+			}
+			
+		}
+		
+		int li=0,hi=n-1,mi=(li+hi)/2,x=0;
+	
 		while(li<=hi)
 		{
 			if(search.equals(a[mi]))
@@ -335,7 +341,7 @@ public class Utility {
 		int n=a.length;
 		int temp=0;
 		for (int i = 0; i < a.length; i++) {
-			for (int j = i=1; j < a.length; j++) {
+			for (int j = i+1; j < a.length; j++) {
 				if(a[i]>a[j])
 				{
 					temp=a[i];
@@ -353,7 +359,7 @@ public class Utility {
 		int n=a.length;
 		String temp="";
 		for (int i = 0; i < a.length; i++) {
-			for (int j = i=1; j < a.length; j++) {
+			for (int j = i+1; j < a.length; j++) {
 				if(a[i].compareTo(a[j])>0)
 				{
 					temp=a[i];

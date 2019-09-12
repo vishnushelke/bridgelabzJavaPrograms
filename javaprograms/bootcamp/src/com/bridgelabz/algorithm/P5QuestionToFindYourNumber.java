@@ -1,6 +1,6 @@
-package task;
+package com.bridgelabz.algorithm;
 import java.util.Scanner;
-public class MagicNumber {
+public class P5QuestionToFindYourNumber {
 	
 	public static void Magic(int a[])
 	{

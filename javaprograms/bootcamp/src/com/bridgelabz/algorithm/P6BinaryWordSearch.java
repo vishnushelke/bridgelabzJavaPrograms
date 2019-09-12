@@ -1,6 +1,6 @@
-package task;
+package com.bridgelabz.algorithm;
 import java.util.Scanner;
-public class BinaryWordSearch {
+public class P6BinaryWordSearch {
 	
 	public static void WordSearch(String a[])
 	{
