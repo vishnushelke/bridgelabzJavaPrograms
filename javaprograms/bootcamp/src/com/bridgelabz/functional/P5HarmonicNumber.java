@@ -1,16 +1,19 @@
 package com.bridgelabz.functional;
 import java.util.Scanner;
-public class PowerOf2 {
+public class P5HarmonicNumber {
 
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter the value of n");
-		int n=sc.nextInt();
+		double n=sc.nextDouble();
+		Double H=(double) 0;
 		
-		for(int i=0;i<=n;i++)
+		for(double i=1;i<=n;i++)
 		{
-			System.out.println((int)Math.pow(2, i));
+			double x=1/i;
+			H=H+x;
 		}
+		System.out.println("Required "+(int)n+"th Harmonic number is "+H);
 		sc.close();
 	}
 

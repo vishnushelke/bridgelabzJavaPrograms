@@ -1,6 +1,6 @@
 package com.bridgelabz.functional;
 import java.util.*;
-public class NUmberOfTriplets {
+public class P10NumberOfTriplets {
 
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);

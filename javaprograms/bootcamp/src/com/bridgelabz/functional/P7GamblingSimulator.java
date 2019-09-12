@@ -1,7 +1,7 @@
 package com.bridgelabz.functional;
 import java.util.Scanner;
 import java.lang.Math;
-public class GamblingSimulator {
+public class P7GamblingSimulator {
 
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);

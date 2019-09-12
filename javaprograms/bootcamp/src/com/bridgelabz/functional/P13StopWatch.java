@@ -1,7 +1,7 @@
 package com.bridgelabz.functional;
 import java.util.Random;
 import com.bridgelabz.utility.Utility;
-public class StopWatch {
+public class P13StopWatch {
 	public static void main(String[] args) throws InterruptedException {
 		
 		Utility.start();

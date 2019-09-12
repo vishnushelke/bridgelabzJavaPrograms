@@ -1,6 +1,6 @@
 package com.bridgelabz.functional;
 import java.util.Scanner;
-public class WindChill {
+public class P16WindChill {
 
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);

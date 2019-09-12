@@ -218,5 +218,152 @@ public class Utility {
 			return false;
 		}
 	}
+	
+	public static void binaryNumberSearch(int[] a,int search)
+	{
+		int n=a.length;
+		int temp=0;
+		for(int i=0;i<n;i++)
+		{
+			for(int j=i+1;j<n;j++)
+			{
+				if(a[i]>a[j])
+				{
+					temp=a[i];
+					a[i]=a[j];
+					a[j]=temp;
+				}
+			}
+		}
+		System.out.println();
+		for(int i=0;i<n;i++)
+			System.out.print(a[i]+" ");
+		System.out.println();
+		
+		System.out.println("Enter the number you want to search");
+		
+		
+		int li=0;
+		int hi=n-1;
+		int mi=(li+hi)/2;
+		while(li<=hi)
+		{
+			if(search==a[mi])
+			{
+				System.out.println("Number is at position "+mi);
+				break;
+			}
+			else if(search<a[mi])
+			{
+				hi=mi-1;
+			}	
+			else
+			{
+				li=mi+1;
+			}
+			mi=(hi+li)/2;
+		}
+		
+	}
+	public static void binaryWordSearch(String[] a,String search) 
+	{
+		int n=a.length;
+		int li=0,hi=n-1,mi=(li+hi)/2,x=0;
+		String temp="";
+		while(li<=hi)
+		{
+			if(search.equals(a[mi]))
+			{
+				System.out.println("Word found at index value "+mi);
+				x=1;
+				break;
+			}
+			
+			else if(search.compareTo(a[mi])>0)
+				li=mi+1;
+			else hi=mi-1;
+			mi=(li+hi)/2;
+		}
+		if(x==0)
+			System.out.println("Word not found");
+		
+	}
+	
+	public static int[] insertionNumberSort(int[] a)
+	{
+		int n=a.length;
+		int temp=0;
+		
+		for(int i=0;i<n;i++)
+		{
+			temp=a[i];
+			int j=0;
+			j=i;
+			while((j>0) && (a[j-1]>temp))
+			{
+				a[j]=a[j-1];
+				j--;
+			}
+			a[j]=temp;
+		}
+		return a;
+		
+	}
+	
+	public static String[] insertionWordSort(String[] a)
+	{
+		int n=a.length;
+		String temp="";
+		
+		for(int i=0;i<n;i++)
+		{
+			temp=a[i];
+			int j=0;
+			j=i;
+			while((j>0) && (a[j-1].compareTo(temp)>0))
+			{
+				a[j]=a[j-1];
+				j--;
+			}
+			a[j]=temp;
+		}
+		return a;
+	}
+	
+	public static int[] bubbleNumberSort(int[] a)
+	{
+		int n=a.length;
+		int temp=0;
+		for (int i = 0; i < a.length; i++) {
+			for (int j = i=1; j < a.length; j++) {
+				if(a[i]>a[j])
+				{
+					temp=a[i];
+					a[i]=a[j];
+					a[j]=temp;
+				}
+			}
+			
+		}
+		return a;
+	}
+	
+	public static String[] bubbleWordSort(String[] a)
+	{
+		int n=a.length;
+		String temp="";
+		for (int i = 0; i < a.length; i++) {
+			for (int j = i=1; j < a.length; j++) {
+				if(a[i].compareTo(a[j])>0)
+				{
+					temp=a[i];
+					a[i]=a[j];
+					a[j]=temp;
+				}
+			}
+			
+		}
+		return a;
+	}
 
 }

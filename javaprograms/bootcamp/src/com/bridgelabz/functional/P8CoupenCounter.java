@@ -1,7 +1,7 @@
 package com.bridgelabz.functional;
 import java.util.Scanner;
 import java.util.Random;
-public class CoupenCounter {
+public class P8CoupenCounter {
 	
 	public static int Rand(int n)
 	{

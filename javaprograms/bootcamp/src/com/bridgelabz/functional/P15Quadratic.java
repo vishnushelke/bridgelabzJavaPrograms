@@ -1,7 +1,7 @@
 package com.bridgelabz.functional;
 import java.lang.Math;
 import java.util.Scanner;
-public class Quadratic {
+public class P15Quadratic {
 
 	public static void main(String[] args) {
 		int a,b,c;

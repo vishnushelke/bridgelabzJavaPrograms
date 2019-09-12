@@ -1,6 +1,6 @@
 package com.bridgelabz.functional;
 import java.util.*;
-public class TwoDArray {
+public class P9TwoDArray {
 	
 	public static void bolleanArray(int m,int n)
 	{

@@ -1,6 +1,6 @@
 package com.bridgelabz.functional;
 import java.util.Random;
-public class FlipCoin {
+public class P2FlipCoin {
 
 	public static void main(String[] args) {
 		Random rand=new Random();

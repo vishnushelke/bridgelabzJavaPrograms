@@ -1,6 +1,6 @@
 package com.bridgelabz.functional;
 import java.util.Scanner;
-public class FactorsOfNumber {
+public class P6FactorsOfNumber {
 
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);

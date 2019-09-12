@@ -1,6 +1,6 @@
 package com.bridgelabz.algorithm;
 import java.util.Scanner;
-public class AnagramChecker {
+public class P1AnagramChecker {
 
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
