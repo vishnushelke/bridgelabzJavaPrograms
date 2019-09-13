@@ -37,6 +37,7 @@ public class P16BinarySwap {
 		{
 			arr[i]=0;
 		}
+		System.out.println("Number Before Swapping is :");
 		for(int i=31;i>=0;i--)
 		{
 			System.out.print(arr[i]);
@@ -55,7 +56,7 @@ public class P16BinarySwap {
 				i=i+4;
 			}
 		}
-		
+		System.out.println("Number after Swapping is :");
 		for(int i=31;i>=0;i--)
 		{
 			System.out.print(arr[i]);
