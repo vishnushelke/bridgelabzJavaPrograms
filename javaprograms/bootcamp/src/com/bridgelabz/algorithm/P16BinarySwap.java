@@ -1,6 +1,6 @@
 /******************************************************************************
- *  Compilation:  javac -d bin P15Binary.java
- *  Execution:    java -cp bin com.bridgelabz.algorithm.P15Binary n
+ *  Compilation:  javac -d bin P16BinarySwap.java
+ *  Execution:    java -cp bin com.bridgelabz.algorithm.P16BinarySwap n
  *  
  *  Purpose: Converts Decimal number into binary and swaps nibbles
  *

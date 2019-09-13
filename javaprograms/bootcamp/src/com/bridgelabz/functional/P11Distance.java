@@ -1,3 +1,14 @@
+/******************************************************************************
+ *  Compilation:  javac -d bin P11Distance.java
+ *  Execution:    java -cp bin com.bridgelabz.functional.P11Distance n
+ *  
+ *  Purpose: Finds the Euclidean Distance of a point from origin
+ *
+ *  @author  Vishnu Shelke
+ *  @version 1.0
+ *  @since   10-09-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.functional;
 
 import java.util.Scanner;
