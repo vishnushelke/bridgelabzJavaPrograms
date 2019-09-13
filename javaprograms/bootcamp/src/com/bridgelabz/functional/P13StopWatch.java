@@ -1,3 +1,14 @@
+/******************************************************************************
+ *  Compilation:  javac -d bin P13StopWatch.java
+ *  Execution:    java -cp bin com.bridgelabz.functional.P13StopWatch n
+ *  
+ *  Purpose: Calculates time required to execute the program code
+ *
+ *  @author  Vishnu Shelke
+ *  @version 1.0
+ *  @since   10-09-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.functional;
 import java.util.Random;
 import com.bridgelabz.utility.Utility;

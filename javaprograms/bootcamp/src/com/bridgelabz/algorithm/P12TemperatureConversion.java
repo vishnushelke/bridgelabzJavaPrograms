@@ -1,3 +1,14 @@
+/******************************************************************************
+ *  Compilation:  javac -d bin P12TemperatureConversion.java
+ *  Execution:    java -cp bin com.bridgelabz.algorithm.P12TemperatureConversion n
+ *  
+ *  Purpose: Converts the temperature in centigrade to fehrenheit and vise versa
+ *
+ *  @author  Vishnu Shelke
+ *  @version 1.0
+ *  @since   09-09-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.algorithm;
 import java.util.Scanner;
 public class P12TemperatureConversion {

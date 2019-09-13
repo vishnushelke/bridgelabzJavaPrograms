@@ -1,3 +1,14 @@
+/******************************************************************************
+ *  Compilation:  javac -d bin P5QuestionToFindYourNumber.java
+ *  Execution:    java -cp bin com.bridgelabz.algorithm.P5QuestionToFindYourNumber n
+ *  
+ *  Purpose: Asks you a question till finding your number
+ *
+ *  @author  Vishnu Shelke
+ *  @version 1.0
+ *  @since   10-09-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.algorithm;
 import java.util.Scanner;
 public class P5QuestionToFindYourNumber {

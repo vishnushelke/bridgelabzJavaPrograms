@@ -1,3 +1,14 @@
+/******************************************************************************
+ *  Compilation:  javac -d bin P3LeapYear.java
+ *  Execution:    java -cp bin com.bridgelabz.functional.P3LeapYear n
+ *  
+ *  Purpose: Finds whether user given Year is Leap year or not
+ *
+ *  @author  Vishnu Shelke
+ *  @version 1.0
+ *  @since   11-09-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.functional;
 import java.util.Scanner;
 public class P3LeapYear {

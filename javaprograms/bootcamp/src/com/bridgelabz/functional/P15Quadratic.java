@@ -1,3 +1,14 @@
+/******************************************************************************
+ *  Compilation:  javac -d bin P15Quadratic.java
+ *  Execution:    java -cp bin com.bridgelabz.functional.P15Quadratic n
+ *  
+ *  Purpose: Finds the roots of a Quadratic Equation
+ *
+ *  @author  Vishnu Shelke
+ *  @version 1.0
+ *  @since   11-09-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.functional;
 import java.lang.Math;
 import java.util.Scanner;

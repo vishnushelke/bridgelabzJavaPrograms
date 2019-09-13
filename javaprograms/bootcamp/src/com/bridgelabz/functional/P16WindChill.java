@@ -1,3 +1,14 @@
+/******************************************************************************
+ *  Compilation:  javac -d bin P16WindChill.java
+ *  Execution:    java -cp bin com.bridgelabz.functional.P16WindChill n
+ *  
+ *  Purpose: Calculates the Windchill for windspeed v and temperature t
+ *
+ *  @author  Vishnu Shelke
+ *  @version 1.0
+ *  @since   11-09-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.functional;
 import java.util.Scanner;
 public class P16WindChill {

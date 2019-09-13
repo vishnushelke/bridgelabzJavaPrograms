@@ -1,3 +1,14 @@
+/******************************************************************************
+ *  Compilation:  javac -d bin P5HarmonicNumber.java
+ *  Execution:    java -cp bin com.bridgelabz.functional.P5HarmonicNumber n
+ *  
+ *  Purpose: Calculates the nth Harmonic number
+ *
+ *  @author  Vishnu Shelke
+ *  @version 1.0
+ *  @since   11-09-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.functional;
 import java.util.Scanner;
 public class P5HarmonicNumber {

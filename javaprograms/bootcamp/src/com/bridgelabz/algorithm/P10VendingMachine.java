@@ -1,3 +1,15 @@
+/******************************************************************************
+ *  Compilation:  javac -d bin P10VendingMachine.java
+ *  Execution:    java -cp bin com.bridgelabz.algorithm.P10VendingMachine n
+ *  
+ *  Purpose: Determines notes required to give change of n rupees.
+ *
+ *  @author  Vishnu Shelke
+ *  @version 1.0
+ *  @since   09-09-2019
+ *
+ ******************************************************************************/
+
 package com.bridgelabz.algorithm;
 
 
@@ -6,7 +18,8 @@ public class P10VendingMachine {
 	
 	public static void Notes(int amount)
 	{
-		int a[]= {1000,500,200,100,50,20,10,5,2,1};
+		//Different notes in machine
+		int a[]= {1000,500,100,50,10,5,2,1};
 		int i=0;
 		while(amount>0 && i<a.length)
 		{
@@ -16,7 +29,7 @@ public class P10VendingMachine {
 				int c=amount/a[i];
 				System.out.println(c+" Notes of "+a[i]);
 				amount=amount%a[i];
-				//i++;
+				
 			}
 			else
 			{
@@ -27,6 +40,7 @@ public class P10VendingMachine {
 	}
 
 	public static void main(String[] args) {
+		//Taking Rupees from User
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter the amount");
 		int amount=sc.nextInt();

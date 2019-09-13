@@ -1,3 +1,14 @@
+/******************************************************************************
+ *  Compilation:  javac -d bin WordSearch.java
+ *  Execution:    java -cp bin com.bridgelabz.algorithm.WordSearch n
+ *  
+ *  Purpose: Perform Word Search using binary searching
+ *
+ *  @author  Vishnu Shelke
+ *  @version 1.0
+ *  @since   10-09-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.algorithm;
 import java.util.Scanner;
 public class P6BinaryWordSearch {

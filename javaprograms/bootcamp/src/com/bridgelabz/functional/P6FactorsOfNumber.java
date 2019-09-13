@@ -1,3 +1,14 @@
+/******************************************************************************
+ *  Compilation:  javac -d bin P6FactorsOfNumber.java
+ *  Execution:    java -cp bin com.bridgelabz.functional.P6FactorsOfNumber n
+ *  
+ *  Purpose: Displays the prime Factors of Number n
+ *
+ *  @author  Vishnu Shelke
+ *  @version 1.0
+ *  @since   11-09-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.functional;
 import java.util.Scanner;
 public class P6FactorsOfNumber {

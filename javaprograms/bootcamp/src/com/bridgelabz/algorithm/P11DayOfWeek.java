@@ -1,8 +1,20 @@
+/******************************************************************************
+ *  Compilation:  javac -d bin P11DayOfWeek.java
+ *  Execution:    java -cp bin com.bridgelabz.algorithm.P11DayOfWeek n
+ *  
+ *  Purpose: Finds the day if we enter the date
+ *
+ *  @author  Vishnu Shelke
+ *  @version 1.0
+ *  @since   09-09-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.algorithm;
 import java.util.Scanner;
 public class P11DayOfWeek {
 
 	public static void main(String[] args) {
+		//Taking inputs from User
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter the Year");
 		int y=sc.nextInt();

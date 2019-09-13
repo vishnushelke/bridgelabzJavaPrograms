@@ -1,3 +1,14 @@
+/******************************************************************************
+ *  Compilation:  javac -d bin P9TwoDArray.java
+ *  Execution:    java -cp bin com.bridgelabz.functional.P9TwoDArray n
+ *  
+ *  Purpose: Displays 2DArray of boolean,integers and doubles 
+ *
+ *  @author  Vishnu Shelke
+ *  @version 1.0
+ *  @since   11-09-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.functional;
 import java.util.*;
 public class P9TwoDArray {

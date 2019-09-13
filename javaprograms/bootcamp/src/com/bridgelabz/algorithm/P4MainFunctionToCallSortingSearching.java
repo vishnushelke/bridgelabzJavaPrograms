@@ -1,3 +1,17 @@
+/******************************************************************************
+ *  Compilation:  javac -d bin P4MainFunctionToCallSortingSearching.java
+ *  Execution:    java -cp bin com.bridgelabz.algorithm.P4MainFunctionToCallSortingSearching n
+ *  
+ *  Purpose: Takes the input from user and search in the given integer array using binary search 
+ *  		 Also search the user given String in a String array.Performs Bubble Sorting and 
+ *           Insersion sorting of a String Array and Integer Array.Calculates the time required
+ *           for each Scenario.
+ *
+ *  @author  Vishnu Shelke
+ *  @version 1.0
+ *  @since   10-09-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.algorithm;
 import java.util.*;
 import com.bridgelabz.utility.Utility;

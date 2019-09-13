@@ -1,3 +1,14 @@
+/******************************************************************************
+ *  Compilation:  javac -d bin P2FlipCoin.java
+ *  Execution:    java -cp bin com.bridgelabz.functional.P2FlipCoin n
+ *  
+ *  Purpose: Perform coin flip n times and finds percentage of head vs tail
+ *
+ *  @author  Vishnu Shelke
+ *  @version 1.0
+ *  @since   11-09-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.functional;
 import java.util.Random;
 public class P2FlipCoin {

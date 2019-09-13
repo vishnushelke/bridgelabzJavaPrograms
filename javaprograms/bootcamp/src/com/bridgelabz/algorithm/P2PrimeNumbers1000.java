@@ -1,3 +1,14 @@
+/******************************************************************************
+ *  Compilation:  javac -d bin P2PrimeNumbers1000.java
+ *  Execution:    java -cp bin com.bridgelabz.algorithm.P2PrimeNumbers1000 n
+ *  
+ *  Purpose: Finds the Prime Numbers upto 1000
+ *
+ *  @author  Vishnu Shelke
+ *  @version 1.0
+ *  @since   10-09-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.algorithm;
 
 import com.bridgelabz.utility.Utility;

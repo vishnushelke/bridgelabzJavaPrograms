@@ -1,3 +1,14 @@
+/******************************************************************************
+ *  Compilation:  javac -d bin P13MonthlyPayment.java
+ *  Execution:    java -cp bin com.bridgelabz.algorithm.P13MonthlyPayment n
+ *  
+ *  Purpose: Determines the monthly payment to return the amount taken for n time 
+ *
+ *  @author  Vishnu Shelke
+ *  @version 1.0
+ *  @since   09-09-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.algorithm;
 import java.util.Scanner;
 public class P13MonthlyPayment {

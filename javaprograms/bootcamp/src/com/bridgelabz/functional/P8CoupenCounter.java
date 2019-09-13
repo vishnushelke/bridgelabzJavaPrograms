@@ -1,3 +1,14 @@
+/******************************************************************************
+ *  Compilation:  javac -d bin P8CoupenCounter.java
+ *  Execution:    java -cp bin com.bridgelabz.functional.P8CoupenCounter n
+ *  
+ *  Purpose: Determines how much time we need to take random steps to display n different coupens
+ *
+ *  @author  Vishnu Shelke
+ *  @version 1.0
+ *  @since   11-09-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.functional;
 import java.util.Scanner;
 import java.util.Random;

@@ -1,3 +1,14 @@
+/******************************************************************************
+ *  Compilation:  javac -d bin P7GamblingSimulator.java
+ *  Execution:    java -cp bin com.bridgelabz.functional.P7GamblingSimulator n
+ *  
+ *  Purpose: Determines when to quit the Gambling
+ *
+ *  @author  Vishnu Shelke
+ *  @version 1.0
+ *  @since   11-09-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.functional;
 import java.util.Scanner;
 import java.lang.Math;

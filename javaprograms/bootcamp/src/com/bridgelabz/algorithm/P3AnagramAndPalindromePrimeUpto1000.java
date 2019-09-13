@@ -1,3 +1,14 @@
+/******************************************************************************
+ *  Compilation:  javac -d bin P3AnagramAndPalindromePrimeUpto1000.java
+ *  Execution:    java -cp bin com.bridgelabz.algorithm.P3AnagramAndPalindromePrimeUpto1000 n
+ *  
+ *  Purpose: Finds the prime numbers upto 1000 which anagram to each other and palindromes
+ *
+ *  @author  Vishnu Shelke
+ *  @version 1.0
+ *  @since   10-09-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.algorithm;
 
 import com.bridgelabz.utility.Utility;

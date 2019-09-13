@@ -1,3 +1,14 @@
+/******************************************************************************
+ *  Compilation:  javac -d bin P10NumberOfTriplets.java
+ *  Execution:    java -cp bin com.bridgelabz.functional.P10NumberOfTriplets n
+ *  
+ *  Purpose: Finds Number of triplets in given array whose sum is 0
+ *
+ *  @author  Vishnu Shelke
+ *  @version 1.0
+ *  @since   10-09-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.functional;
 import java.util.*;
 public class P10NumberOfTriplets {

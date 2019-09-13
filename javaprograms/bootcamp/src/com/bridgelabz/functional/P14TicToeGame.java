@@ -1,3 +1,14 @@
+/******************************************************************************
+ *  Compilation:  javac -d bin P14TicToeGame.java
+ *  Execution:    java -cp bin com.bridgelabz.functional.P14TicToeGame n
+ *  
+ *  Purpose: TicTacToe Game making
+ *
+ *  @author  Vishnu Shelke
+ *  @version 1.0
+ *  @since   12-09-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.functional;
 import java.util.Scanner;
 import java.util.Random;

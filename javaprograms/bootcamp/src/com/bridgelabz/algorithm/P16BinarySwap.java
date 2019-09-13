@@ -1,3 +1,14 @@
+/******************************************************************************
+ *  Compilation:  javac -d bin P15Binary.java
+ *  Execution:    java -cp bin com.bridgelabz.algorithm.P15Binary n
+ *  
+ *  Purpose: Converts Decimal number into binary and swaps nibbles
+ *
+ *  @author  Vishnu Shelke
+ *  @version 1.0
+ *  @since   09-09-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.algorithm;
 import java.util.Scanner;
 
