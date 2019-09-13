@@ -51,22 +51,42 @@ public class LinkedList<T> {
 	 public void deleteAt(int position)
 	 {
 		
-		 if(position==0)
+		 if(head==null)
 		 {
-			 head=head.next;
+			 System.out.println("List is empty");
 		 }
 		 else
 		 {
-			 Node<T> newnode=new Node<T>();
-			 Node<T> n=head;
-			 for (int i = 0; i < position-1; i++) {
-				n=n.next;
-			}
-			 newnode=n.next;
-			 n.next=newnode.next;
-			 newnode=null;
+			 if(position==0)
+			 {
+				 head=head.next; 
+			 }
+			 else
+			 {
+				 Node<T> newnode=new Node<T>();
+				 Node<T> n=head;
+				 for (int i = 0; i < position-1; i++) {
+					n=n.next;
+				}
+				 newnode=n.next;
+				 n.next=newnode.next;
+				 newnode=null;
+			 }
+
 		 }
-		
+		 		
+	 }
+	 
+	 public boolean deleteAtBooleanReturn(int position)
+	 {
+		if(head==null)
+		{
+			return false;
+		}
+		else
+		{
+			return true;
+		}
 	 }
 	 
 	 

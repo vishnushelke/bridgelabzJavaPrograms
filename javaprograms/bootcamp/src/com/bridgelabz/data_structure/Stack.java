@@ -12,9 +12,12 @@ public class Stack<T> {
 	}
 	public void pop()
 	{
-		T data;
-		data=(T) stack[top];
+		//System.out.println("popped element is + "+stack[top]);
 		stack[top]=0;
+		for (int i = top; stack[i]!=null; i++) {
+			stack[i]=stack[i-1];
+		}
+		
 		top--;
 		
 	}

@@ -15,31 +15,44 @@ public class P3SimpleParanthesis {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException {
-		Stack<Character> stack=new Stack<Character>();
+		LinkedList<Character> list=new LinkedList<Character>();
 		File f=new File("/home/user/Desktop/vishnu/input for programs/SimpleParanthesis.txt");
 		FileReader fr=new FileReader(f);
 		BufferedReader br=new BufferedReader(fr);
 		
+		int y=0;
 		String s=br.readLine();
 		System.out.println(s);
 		int n=s.length();
 		for (int i = 0; i < n; i++) {
+			y=0;
 			if(s.charAt(i)=='(')
 			{
-				stack.push('(');
+				list.insert('(');
 			}
 			else if(s.charAt(i)==')')
 			{
-				stack.pop();
+				if(list.deleteAtBooleanReturn(0)) {
+					list.deleteAt(0);
+					y=1;
+				}
 			}
 		}
-		if(Stack.size()==0)
+		Node<Character> node=list.head;
+		int x=0;
+		while(node!=null)
+		{
+			x++;
+			node=node.next;
+		}
+		
+		if(x==0 && y==1)
 		{
 			System.out.println("True");
 		}
 		else
 		{
-			System.out.println("False");
+			System.out.println("false");
 		}
 	}
 
