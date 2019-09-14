@@ -17,13 +17,16 @@ import java.util.Scanner;
 public class P4BankCashCounter {
 
 	public static void main(String[] args) {
+		LinkedList<Integer> list=new LinkedList<Integer>();
+		
 		Scanner sc=new Scanner(System.in);
 		int money=0;
-		Queue<Integer> q=new Queue<Integer>();
+		
 		int size1=10;
 		for (int i = 0; i < 10; i++) {
-			q.enQueue(i+1);
+			list.insert(i+1);
 		}
+		list.show();
 		while(size1>=0 && money>=0)
 		{
 			if(size1==0)
@@ -57,6 +60,8 @@ public class P4BankCashCounter {
 					
 				}
 			}
+			list.deleteAt(0);
+			list.show();
 			size1--;
 		}
 		if(money==0 && size1==0)
