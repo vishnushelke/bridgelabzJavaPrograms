@@ -42,42 +42,53 @@ public class P8Calender {
 			days[2] = 29;
 		}
 		int d = Utility.DayOfWeek(1, m, y);
-		
-		//Printing Initial Spaces
+
+		// Printing Initial Spaces
 		for (int i = 0; i < d; i++) {
 			cal[0][i] = "    ";
 		}
-		
-		//Taking values in array
+
+		// Taking values in array
 		int tempDay = 0;
-		for (int i = 0; i < cal.length; i++) {
-			for (int j = 0; j < cal[i].length; j++) {
-				if (!(i == 0 && j < d)) {
-					if (tempDay <= days[m]) {
+		for (int i = 0; i < cal.length; i++) 
+		{
+			for (int j = 0; j < cal[i].length; j++) 
+			{
+				if (!(i == 0 && j < d))
+				{
+					if (tempDay <= days[m]) 
+					{
 						tempDay++;
-						if (tempDay < 10) {
+						if (tempDay < 10) 
+						{
 							cal[i][j] = "   " + tempDay;
-						} else {
+						} else 
+						{
 							cal[i][j] = "  " + tempDay;
 						}
-					} else {
+					} 
+					else 
+					{
 						break;
 					}
 				}
 
 			}
 		}
-		
-		//Printing an array
+
+		// Printing an array
 		tempDay = 0;
-		for (int i = 0; i < cal.length; i++) {
-			for (int j = 0; j < cal[i].length; j++) {
-				if (days[m] >= tempDay) {
+		for (int i = 0; i < cal.length; i++) 
+		{
+			for (int j = 0; j < cal[i].length; j++) 
+			{
+				if (days[m] >= tempDay) 
+				{
 					tempDay++;
-
 					System.out.print(cal[i][j]);
-
-				} else {
+				} 
+				else 
+				{
 					break;
 				}
 

@@ -1,8 +1,9 @@
 package com.bridgelabz.data_structure;
 
 public class Queue<T> {
-	public Object queue[]=new Object [10];
-	public int front,rear,size;
+	LinkedList<T> list=new LinkedList<T>();
+	public int size;
+	Node<T> head=list.head;
 	
 	public void enQueue(T data)
 	{
@@ -12,8 +13,7 @@ public class Queue<T> {
 		}
 		else
 		{
-			queue[rear]=data;
-			rear++;
+			list.insert(data);
 			size++;
 		}
 		
@@ -27,14 +27,30 @@ public class Queue<T> {
 		else
 		{
 			T data;
-			data=(T) queue[front];
-			for(int i=front;i<=rear;i++)
-			{
-				queue[i]=queue[i+1];
+			Node<T> node=list.head;
+			for (Node<T> i=list.head; i.next!=null; i=i.next) {
+				node=node.next;
 			}
-			queue[rear]=0;
-			rear--;
+			data=node.data;
+			node=null;
 			size--;
+		}
+	}
+	
+	public void show()
+	{
+		if(size==0)
+		{
+			System.out.println("Queue is Empty");
+		}
+		else
+		{
+			
+			Node<T> node=list.head;
+			while(node.next!=null) {
+			System.out.print(node.data);
+			node=node.next;
+			}
 		}
 	}
 
