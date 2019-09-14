@@ -24,7 +24,7 @@ public class P5PalindromeChecker {
 			list.insert(s.charAt(i));
 		}
 		
-		Node<Character> node=new Node<Character>();
+		
 		Node<Character> last=list.head;
 		
 		
@@ -53,7 +53,7 @@ public class P5PalindromeChecker {
 		{
 			System.out.println("String is not Palindrome");
 		}
-		
+		sc.close();
 	}
 
 }
