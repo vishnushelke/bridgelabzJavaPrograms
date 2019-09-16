@@ -1,42 +1,73 @@
-
 package com.bridgelabz.data_structure;
 
 public class Stack<T> {
+	
+	LinkedList<T> list=new LinkedList<T>();
+	int top,size,rear;
+	Node<T> head=list.head;
 
-	Object stack[]=new Object [6];
-	public static int top;
 	public void push(T data)
 	{
-		stack[top]=data;
-		top++;
+		list.insert(data);
+		size++;
 	}
-	public void pop()
+	
+	public T pop()
 	{
-		//System.out.println("popped element is + "+stack[top]);
-		stack[top]=0;
-		for (int i = top; stack[i]!=null; i++) {
-			stack[i]=stack[i-1];
-		}
-		
-		top--;
-		
-	}
-	public void peek()
-	{
+		int x=0;
 		T data;
-		data=(T)stack[top-1];
-		System.out.println("Peeked Element is : "+data);
+		Node<T> n=new Node<T>();
+		while(n.next!=null)
+		{
+			x++;
+			n=n.next;
+		}
+		data=n.data;
+		list.deleteAt(x+1);
+		return data;
 	}
-	
-	public static int size() {
-		return top;
-	}
-	
-	public static boolean isEmpty()
+	public int size()
 	{
-		if(top==0)
-			return true;
-		else
-			return false;
+		size=0;
+		Node<T> n=list.head;
+		while(n.next!=null)
+		{
+			size++;
+			n=n.next;
+		}
+		return size;
 	}
+	
+	public void show()
+	{
+		Node<T> n=list.head;
+		if(list.head==null)
+		{
+			System.out.println("Stack is Empty");
+		}
+		else
+		{
+		 
+			while(n!=null)
+			{
+				System.out.print(n.data+" ");
+				n=n.next;
+			}
+		
+		}
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Stack<Integer> s=new Stack<Integer>();
+		s.push(1);
+		
+		s.push(23);
+		System.out.println(s.pop());
+
+		
+		s.show();
+	}
+
 }

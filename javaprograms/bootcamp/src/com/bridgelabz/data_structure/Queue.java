@@ -7,7 +7,7 @@ public class Queue<T> {
 	
 	public void enQueue(T data)
 	{
-		if(size>10)
+		if(size>39)
 		{
 			System.out.println("Queue is full");
 		}
@@ -28,10 +28,8 @@ public class Queue<T> {
 		{
 			T data;
 			Node<T> node=list.head;
-			for (Node<T> i=list.head; i.next!=null; i=i.next) {
-				node=node.next;
-			}
 			data=node.data;
+			head=head.next;
 			node=null;
 			size--;
 		}
@@ -47,7 +45,7 @@ public class Queue<T> {
 		{
 			
 			Node<T> node=list.head;
-			while(node.next!=null) {
+			while(node!=null) {
 			System.out.print(node.data);
 			node=node.next;
 			}
