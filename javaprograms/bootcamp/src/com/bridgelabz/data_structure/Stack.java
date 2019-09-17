@@ -14,16 +14,7 @@ public class Stack<T> {
 	
 	public T pop()
 	{
-		int x=0;
-		T data;
-		Node<T> n=new Node<T>();
-		while(n.next!=null)
-		{
-			x++;
-			n=n.next;
-		}
-		data=n.data;
-		list.deleteAt(x+1);
+		T data=null;
 		return data;
 	}
 	public int size()

@@ -38,7 +38,7 @@ public class P11PrimeNumbers1000 {
 			
 
 		}
-		start = 2;
+		start = 0;
 		end = 100;
 		//putting values in array
 		for (int i = 0; i < 10; i++) {
@@ -56,10 +56,13 @@ public class P11PrimeNumbers1000 {
 		}
 
 		// printing array
+//		for (int i = 0; i < primeNumber.length; i++) {
+//			for (int j = 0; j < primeNumber[i].length; j++)
+//				System.out.print(primeNumber[i][j] + " ");
+//			System.out.println();
+//		}
 		for (int i = 0; i < primeNumber.length; i++) {
-			for (int j = 0; j < primeNumber[i].length; j++)
-				System.out.print(primeNumber[i][j] + " ");
-			System.out.println();
+			System.out.print(primeNumber[i].length+" ");
 		}
 	}
 

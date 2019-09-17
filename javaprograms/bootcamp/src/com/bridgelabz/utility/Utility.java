@@ -214,7 +214,7 @@ public class Utility {
 		char[] arr1 = str1.toCharArray();
 		char[] arr2 = str2.toCharArray();
 
-		if (str1.length() != str2.length()) {
+		if (str1.length() != str2.length() || str1.equals(str2)) {
 			return false;
 		} else {
 			Arrays.sort(arr1);
