@@ -1,4 +1,4 @@
-package com.bridgelabz.data_structure;
+package com.bridgelabz.datastructure;
 
 public class HashingList {
 	

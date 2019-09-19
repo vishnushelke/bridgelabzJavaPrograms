@@ -9,7 +9,7 @@
  *  @since   13-09-2019
  *
  ******************************************************************************/
-package com.bridgelabz.data_structure;
+package com.bridgelabz.datastructure;
 import java.io.*;
 public class P3SimpleParanthesis {
 

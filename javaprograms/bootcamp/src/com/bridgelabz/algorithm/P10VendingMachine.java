@@ -44,6 +44,10 @@ public class P10VendingMachine {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter the amount");
 		int amount=sc.nextInt();
+		if(amount<0)
+		{
+			System.out.println("Amount can not be negative");
+		}
 		Notes(amount);
 	}
 

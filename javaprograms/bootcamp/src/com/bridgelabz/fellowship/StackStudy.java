@@ -1,6 +1,6 @@
 package com.bridgelabz.fellowship;
 
-import com.bridgelabz.data_structure.Stack;
+import com.bridgelabz.datastructure.Stack;
 
 public class StackStudy {
 

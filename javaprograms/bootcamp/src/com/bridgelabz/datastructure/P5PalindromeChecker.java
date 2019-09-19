@@ -9,7 +9,7 @@
  *  @since   14-09-2019
  *
  ******************************************************************************/
-package com.bridgelabz.data_structure;
+package com.bridgelabz.datastructure;
 import java.util.*;
 public class P5PalindromeChecker {
 

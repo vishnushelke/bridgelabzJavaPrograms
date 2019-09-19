@@ -59,9 +59,9 @@ public class P12StringPermutation {
 			while (j > i && s[j] <= s[i - 1])
 				j--;
 
-			Utility.swap1(s, i - 1, j);
+			Utility.swap(s, i - 1, j);
 
-			Utility.reverse1(s, i, n - 1);
+			Utility.reverse(s, i, n - 1);
 		}
 
 	}

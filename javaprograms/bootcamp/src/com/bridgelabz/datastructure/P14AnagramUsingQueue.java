@@ -9,7 +9,7 @@
  *  @since   17-09-2019
  *
  ******************************************************************************/
-package com.bridgelabz.data_structure;
+package com.bridgelabz.datastructure;
 
 import com.bridgelabz.utility.Utility;
 

@@ -11,6 +11,8 @@
  ******************************************************************************/
 package com.bridgelabz.algorithm;
 import java.util.Scanner;
+
+import com.bridgelabz.utility.Utility;
 public class P5QuestionToFindYourNumber {
 	
 	public static void Magic(int a[])
@@ -24,14 +26,23 @@ public class P5QuestionToFindYourNumber {
 		
 		while(li<=hi)
 		{
-			System.out.println("if number is "+(li)+" to "+(mi)+" enter 0.Else,enter 1");
-			int x=sc.nextInt();
-			if(li==hi)
+			System.out.println("If your number is "+mi+",enter 0,wlse enter 1.");
+			int answer=Utility.intScan();
+			if(answer==0)
 			{
-				System.out.println("The number you thought is "+a[li]);
+				System.out.println("Your number is "+mi);
 				break;
 			}
-			else if(x==0)
+			
+			
+			System.out.println("if number is "+(li)+" to "+(mi)+" enter 0.Else,enter 1");
+			int response=sc.nextInt();
+			if(li==hi)
+			{
+				System.out.println("The number you thought is "+li);
+				break;
+			}
+			else if(response==0)
 				hi=mi-1;
 			else
 				li=mi+1;

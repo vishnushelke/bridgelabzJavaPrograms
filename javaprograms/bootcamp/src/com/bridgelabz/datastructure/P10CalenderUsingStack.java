@@ -10,7 +10,7 @@
  *
  ******************************************************************************/
 
-package com.bridgelabz.data_structure;
+package com.bridgelabz.datastructure;
 
 import java.util.Scanner;
 

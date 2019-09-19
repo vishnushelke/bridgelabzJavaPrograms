@@ -1,23 +1,31 @@
 package com.bridgelabz.utility;
 
-import java.util.Arrays;
-import java.util.Random;
+import java.util.*;
 
 public class Utility {
 	
-	public static void swap1(char[] arr, int i, int j) {
-		char c = arr[i];
-		arr[i] = arr[j];
-		arr[j] = c;
+	public static int intScan()
+	{
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		sc.close();
+		return n;
 	}
-
-	public static void reverse1(char[] arr, int i, int j) {
-		
-		while (i < j) {
-			swap1(arr, i++, j--);
-		}
+	public static String stringScan()
+	{
+		Scanner sc=new Scanner(System.in);
+		String n=sc.nextLine();
+		sc.close();
+		return n;
 	}
-
+	public static double doubleScan()
+	{
+		Scanner sc=new Scanner(System.in);
+		double n=sc.nextDouble();
+		sc.close();
+		return n;
+	}
+	
 	public static int DayOfWeek(int d,int m,int y)
 	{
 		int o=0;
