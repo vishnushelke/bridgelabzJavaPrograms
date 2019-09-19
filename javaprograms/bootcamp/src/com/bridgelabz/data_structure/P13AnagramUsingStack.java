@@ -14,41 +14,31 @@ package com.bridgelabz.data_structure;
 import com.bridgelabz.utility.Utility;
 
 public class P13AnagramUsingStack {
-	public static void main(String[] args)
-	  {   int start=0;
-	      int end=1000;
-		  Stack<Integer> stack=new Stack<Integer>();
-		  Stack<Integer> stack1=new Stack<Integer>();
-	      
-		  for (int i = start; i <= end; i++) {
-					if (Utility.isPrime(i)) 
-					{
-						String s1=String.valueOf(i);
-						for (int j= i+ 1; j < end; j++)
-						{
-							if (Utility.isPrime(j)) 
-							{
-								String s2=String.valueOf(j);
-								if (Utility.isAnagram(s1, s2)){
-		                            stack.push(i);
-									
-								    }
-							}
+	public static void main(String[] args) {
+		Stack<Integer> stack = new Stack<Integer>();
+
+		for (int i = 0; i <= 1000; i++) {
+			// checking if number is prime
+			if (Utility.isPrime(i)) {
+				String s1 = String.valueOf(i);
+
+				// Searching for an anagram prime of that number
+				for (int j = 0; j < 1000; j++) {
+					if (Utility.isPrime(j)) {
+						String s2 = String.valueOf(j);
+						// if found,printing the number
+						if (Utility.isAnagram(s1, s2)) {
+							stack.push(i);
+							break;
 						}
-				
 					}
-		         }
-		  
-	  
-//	      int size=stack.size();
-//	      
-//	      for(int i=0;i<size+1;i++)
-//	      {
-//	    	  stack1.push(stack.pop());
-//	    	  
-//	      }
-	    		stack.show();;  
-	  
-	  }
+				}
+
+			}
+		}
+
+		stack.show();
+
+	}
 
 }

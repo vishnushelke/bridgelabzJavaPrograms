@@ -37,6 +37,7 @@ public class LinkedList<T> {
 			 while(n.next!=null)
 				 n=n.next;
 			 n.next=newnode;
+			 newnode.next=null;
 		 }
 		
 	 }

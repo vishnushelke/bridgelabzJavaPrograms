@@ -11,7 +11,7 @@ public class P12AnagramAndNonAnagramupto1000 {
 		int start = 0, end = 100, count1 = 0, count2 = 0, x = 0;
 
 		for (int i = 0; i < 10; i++) {
-
+			//declaring array length of each row
 			for (int j = start; j < end; j++) {
 				if (Utility.isPrime(j)) {
 					String s1 = String.valueOf(j);
@@ -41,7 +41,7 @@ public class P12AnagramAndNonAnagramupto1000 {
 			start = end + 1;
 			end = end + 100;
 		}
-
+		//inserting elements into an array
 		start = 0;
 		end = 100;
 		count1 = 0;
