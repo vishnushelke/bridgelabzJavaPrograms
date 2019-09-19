@@ -51,7 +51,7 @@ public class P10CalenderUsingStack {
 		s.show();
 		System.out.println();
 		
-		//calculated first blank spaces
+		//calculated first day of month
 		int d = Utility.DayOfWeek(1, m, y);
 		
 		// printing first blank spaces
