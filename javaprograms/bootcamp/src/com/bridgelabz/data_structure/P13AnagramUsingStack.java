@@ -1,8 +1,19 @@
+/******************************************************************************
+ *  Compilation:  javac -d bin P13AnagramUsingStack.java
+ *  Execution:    java -cp bin com.bridgelabz.algorithm.P13AnagramUsingStack n
+ *  
+ *  Purpose: Prints Anagram prime Numbers Upto 1000
+ *
+ *  @author  Vishnu Shelke
+ *  @version 1.0
+ *  @since   17-09-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.data_structure;
 
 import com.bridgelabz.utility.Utility;
 
-public class P13 {
+public class P13AnagramUsingStack {
 	public static void main(String[] args)
 	  {   int start=0;
 	      int end=1000;
@@ -27,15 +38,16 @@ public class P13 {
 				
 					}
 		         }
+		  
 	  
-	      int size=stack.size();
-	      
-	      for(int i=0;i<size;i++)
-	      {
-	    	  stack1.push(stack.pop());
-	    	  
-	      }
-	    		stack1.show();;  
+//	      int size=stack.size();
+//	      
+//	      for(int i=0;i<size+1;i++)
+//	      {
+//	    	  stack1.push(stack.pop());
+//	    	  
+//	      }
+	    		stack.show();;  
 	  
 	  }
 

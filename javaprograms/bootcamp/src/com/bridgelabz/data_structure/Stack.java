@@ -8,13 +8,14 @@ public class Stack<T> {
 
 	public void push(T data)
 	{
-		list.insert(data);
+		list.insertAtStart(data);
 		size++;
 	}
 	
 	public T pop()
 	{
-		T data=null;
+		T data;
+		data=list.deleteAtStart();
 		return data;
 	}
 	public int size()
@@ -55,6 +56,7 @@ public class Stack<T> {
 		s.push(1);
 		
 		s.push(23);
+		//s.pop();
 		System.out.println(s.pop());
 
 		

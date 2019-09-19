@@ -1,3 +1,14 @@
+/******************************************************************************
+ *  Compilation:  javac -d bin P14AnagramUsingQueue.java
+ *  Execution:    java -cp bin com.bridgelabz.algorithm.P14AnagramUsingQueue n
+ *  
+ *  Purpose: Prints Anagram prime Numbers Upto 1000
+ *
+ *  @author  Vishnu Shelke
+ *  @version 1.0
+ *  @since   17-09-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.data_structure;
 
 import com.bridgelabz.utility.Utility;

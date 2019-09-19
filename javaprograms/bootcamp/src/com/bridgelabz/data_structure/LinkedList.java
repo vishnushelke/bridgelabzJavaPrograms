@@ -4,6 +4,23 @@ public class LinkedList<T> {
 	
 	 Node<T> head;
 	 
+	 public void insertAtStart(T data)
+	 {
+		 Node<T> newnode=new Node<T>();
+		 newnode.data=data;
+		 newnode.next=head;
+		 head=newnode;
+	 }
+	 
+	 public T deleteAtStart()
+	 {
+		 T data;
+		 Node<T> newnode=head;
+		 data=newnode.data;
+		 head=head.next;
+		 return data;
+	 }
+	 
 	 public void insert(T data)
 	 {
 		

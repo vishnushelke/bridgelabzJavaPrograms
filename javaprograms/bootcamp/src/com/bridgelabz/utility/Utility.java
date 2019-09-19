@@ -4,6 +4,20 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class Utility {
+	
+	public static void swap1(char[] arr, int i, int j) {
+		char c = arr[i];
+		arr[i] = arr[j];
+		arr[j] = c;
+	}
+
+	public static void reverse1(char[] arr, int i, int j) {
+		
+		while (i < j) {
+			swap1(arr, i++, j--);
+		}
+	}
+
 	public static int DayOfWeek(int d,int m,int y)
 	{
 		int o=0;
