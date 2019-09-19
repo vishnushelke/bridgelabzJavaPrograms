@@ -11,64 +11,65 @@
  *
  ******************************************************************************/
 package com.bridgelabz.datastructure;
+
 import java.io.*;
 import java.util.*;
+
+import com.bridgelabz.utility.Utility;
+
 public class P1UnOrderedList {
-	
-	
 
 	public static void main(String[] args) throws IOException {
-		Scanner sc=new Scanner(System.in);
-		File f=new File("/home/user/Desktop/vishnu/input for programs/unOrdered.txt");
-		FileReader fr=new FileReader(f);
-		@SuppressWarnings("resource")
-		BufferedReader br=new BufferedReader(fr);
-		String []s1=null;
-		String s="";
-	
-		while((s=br.readLine())!=null)
-		{
-			s1=s.split(" ");
-		}
+		Scanner sc = new Scanner(System.in);
 
-		//Created object of a Generic LinkedList
-		LinkedList<String> list=new LinkedList<String>();
+		String[] s1 = null;
+		String s = Utility.reader("/home/user/Desktop/vishnu/input for programs/unOrdered.txt");
+
+		s1 = s.split(" ");
+
+		// Created object of a Generic LinkedList
+		LinkedList<String> list = new LinkedList<String>();
 		for (int i = 0; i < s1.length; i++) {
 			list.insert(s1[i]);
-			
+
 		}
-		
-		//Printing LinkedList
+
+		// Printing LinkedList
+		System.out.println("List is :");
 		list.show();
-		
-		//Taking Input to be searched in list
+
+		// Taking Input to be searched in list
+		System.out.println();
 		System.out.println("Enter the Word to be searched");
-		String search=sc.nextLine();
-		int i=0,x=0;
-		Node<String> newnode=list.head;
-		while(newnode.next!=null)
-		{
-			if(newnode.data.equals(search))
-			{
+		String search = sc.nextLine();
+		int i = 0, x = 0;
+		Node<String> newnode = list.head;
+		while (newnode != null) {
+			if (newnode.data.equals(search)) {
 				System.out.println("Deleting...");
 				list.deleteAt(i);
-				x=1;
+				x = 1;
 				break;
-			}
-			else
-			{
+			} else {
 				i++;
-				newnode=newnode.next;
+				newnode = newnode.next;
 			}
 		}
-		if(x==0)
-		{
+		if (x == 0) {
 			System.out.println("Inserting...");
 			list.insert(search);
 		}
+		String answer="";
 		
 		list.show();
-			sc.close();		
+		Node<String> node=list.head;
+		while(node!=null)
+		{
+			answer=answer+node.data;
+		}
+		System.out.println("Writing in file ...");
+		Utility.writer("/home/user/Desktop/vishnu", answer);
+		sc.close();
 	}
 
 }

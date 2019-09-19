@@ -20,10 +20,12 @@ public class P4BankCashCounter {
 		LinkedList<Integer> list=new LinkedList<Integer>();
 		
 		Scanner sc=new Scanner(System.in);
-		int money=0;
+		System.out.println("Enter number of customers");
+		int customers=sc.nextInt();
+		int money=50000;
 		
-		int size1=10;
-		for (int i = 0; i < 10; i++) {
+		int size1=customers;
+		for (int i = 0; i < customers; i++) {
 			list.insert(i+1);
 		}
 		list.show();
@@ -50,8 +52,11 @@ public class P4BankCashCounter {
 					int w=sc.nextInt();
 					if(w>money)
 					{
-						System.out.println("Sorry!you cannot withdraw this amount");
-						break;
+						System.out.println("Sorry!you cannot withdraw this amount,enter an amount upto "+money);
+						System.out.println("How much money you want to withdraw?");
+						int withdraw=sc.nextInt();
+						money=money-withdraw;
+						
 					}
 					else {
 						money=money-w;
