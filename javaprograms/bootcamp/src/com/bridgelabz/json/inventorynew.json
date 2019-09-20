@@ -1,0 +1,19 @@
+{
+  "grain":[
+    {
+      "name":"rice",
+      "weight":15,
+      "price":50
+    },
+    {
+      "name":"wheat",
+      "weight":45,
+      "price":40
+    },
+    {
+      "name":"pulses",
+      "weight":20,
+      "price":80
+    }
+    ]
+}
