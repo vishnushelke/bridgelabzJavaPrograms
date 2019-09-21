@@ -6,6 +6,9 @@ public class State {
 	private List<Maharashtra> maharashtra = null;
 	private List<Karnataka> karnataka = null;
 	private List<Kerala> kerala = null;
+	
+	private String statename;
+	
 	public List<Maharashtra> getMaharashtra() {
 		return maharashtra;
 	}
@@ -23,5 +26,11 @@ public class State {
 	}
 	public void setKerala(List<Kerala> kerala) {
 		this.kerala = kerala;
+	}
+	public String getStatename() {
+		return statename;
+	}
+	public void setStatename(String statename) {
+		this.statename = statename;
 	}
 }

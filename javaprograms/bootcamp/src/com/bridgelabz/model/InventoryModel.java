@@ -12,7 +12,7 @@ public class InventoryModel implements Serializable{
 	private List<Rice> rice = null;
 	private List<Wheat> wheat = null;
 	private List<Pulse> pulses = null;
-	
+
 	public List<Rice> getRice() {
 		return rice;
 		}

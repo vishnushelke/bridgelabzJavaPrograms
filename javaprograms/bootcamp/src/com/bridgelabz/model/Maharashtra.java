@@ -6,7 +6,7 @@ public class Maharashtra {
 	private String address;
 	private String city;
 	private String state;
-	private Integer zip;
+	private String zip;
 	private String phoneNumber;
 	public String getFirstName() {
 		return firstName;
@@ -38,10 +38,10 @@ public class Maharashtra {
 	public void setState(String state) {
 		this.state = state;
 	}
-	public Integer getZip() {
+	public String getZip() {
 		return zip;
 	}
-	public void setZip(Integer zip) {
+	public void setZip(String zip) {
 		this.zip = zip;
 	}
 	public String getPhoneNumber() {
