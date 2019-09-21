@@ -1,0 +1,41 @@
+{
+  "state":[
+    {
+      
+  "maharashtra":[
+    {
+      "firstName":"vishnu",
+      "lastName":"shelke",
+      "address":"radha krishna nagar",
+        "city":"latur",
+        "state":"maharashtra",
+        "zip": 411030,
+        "phoneNumber": "8180927857"
+    }
+    ],
+    "karnataka":[
+      {
+        "firstName":"mahesh",
+        "lastName":"shelke",
+         "address":"indian oil quarters",
+        "city":"gulbarga",
+        "state":"karnataka",
+        "zip": 320650,
+        "phoneNumber": "9449864372"
+      }
+      ],
+      "kerala":[
+        {
+           "firstName":"rishikesh",
+            "lastName":"mhatre",
+         "address":"out of the range",
+        "city":"gulbarga",
+        "state":"karnataka",
+        "zip": 320650,
+        "phoneNumber": "1234567890"
+        }
+        ]
+}
+    
+    ]
+}

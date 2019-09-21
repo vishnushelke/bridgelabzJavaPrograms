@@ -9,7 +9,6 @@
  *  @since   16-09-2019
  *
  ******************************************************************************/
-**error*
 package com.bridgelabz.datastructure;
 
 import java.util.Scanner;
@@ -39,6 +38,7 @@ public class P10CalenderUsingStack {
 		
 		Stack<String> s = new Stack<String>();
 		Stack<String> cal = new Stack<String>();
+		Stack<String> finalcal = new Stack<String>();
 		
 		//pushing elements in 1st stack
 		s.push("  S");
@@ -55,9 +55,9 @@ public class P10CalenderUsingStack {
 		int d = Utility.DayOfWeek(1, m, y);
 		
 		// printing first blank spaces
-		for (int i = 0; i < d; i++) {
-			cal.push("   ");
-		}
+//		for (int i = 0; i < d; i++) {
+//			cal.push("   ");
+//		}
 		
 		//inserting dates in calendar
 		for (int i = 1; i <= days[m]; i++) {
@@ -69,9 +69,13 @@ public class P10CalenderUsingStack {
 			if ((d + i) % 7 == 0)
 				cal.push("\n");
 		}
-		//printing calendar
 		cal.show();
-		sc.close();
+		//printing calendar
+//		for (int i = d; i < days[m]+d; i++) {
+//			finalcal.push(cal.pop());
+//		}
+//		finalcal.show();
+//		sc.close();
 	}
 
 }
