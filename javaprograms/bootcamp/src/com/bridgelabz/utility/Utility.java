@@ -4,6 +4,7 @@ import java.util.*;
 import java.io.*;
 
 public class Utility {
+
 	
 	public static String reader(String path) throws IOException
 	{
@@ -11,7 +12,7 @@ public class Utility {
 		FileReader fr=new FileReader(f);
 		BufferedReader br=new BufferedReader(fr);
 		String s=br.readLine();
-		br.close();
+	
 		return s;
 	}
 	
@@ -20,28 +21,35 @@ public class Utility {
 		
 		BufferedWriter bw=new BufferedWriter(new FileWriter(path));
 		bw.write(s);
-		bw.close();
+		
 	}
 	
 	public static int intScan()
 	{
 		Scanner sc=new Scanner(System.in);
 		int n=sc.nextInt();
-		sc.close();
+	
+		return n;
+	}
+	public static long longScan()
+	{
+		Scanner sc=new Scanner(System.in);
+		long n=sc.nextLong();
+	
 		return n;
 	}
 	public static String stringScan()
 	{
 		Scanner sc=new Scanner(System.in);
 		String n=sc.nextLine();
-		sc.close();
+		
 		return n;
 	}
 	public static double doubleScan()
 	{
 		Scanner sc=new Scanner(System.in);
 		double n=sc.nextDouble();
-		sc.close();
+		
 		return n;
 	}
 	
@@ -450,6 +458,13 @@ public class Utility {
 		}
 		return arr;
 
+	}
+
+	public static String replaceString(String changeIn,String target,String replacement) {
+		// TODO Auto-generated method stub
+		String answer=changeIn.replace(target, replacement);
+		
+		return answer;
 	}
 
 }

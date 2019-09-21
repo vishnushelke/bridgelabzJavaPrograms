@@ -62,6 +62,8 @@ public class P14TicToeGame {
 		
 		//creating board
 		char[][] a= {{'1','2','3'},{'4','5','6'},{'7','8','9'}};
+		System.out.println("Board is :");
+		show(a);
 		
 		//deciding who will go first
 		double x=Math.random();
