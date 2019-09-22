@@ -13,7 +13,7 @@ public class DeckOfCards {
 		String[] rank = { "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14" };
 		String[] deck = new String[52];
 		int length = deck.length;
-		String[][] cardsOfPlayers=new String[4][9];
+		String[][] cardsOfPlayers = new String[4][9];
 		int i = 0;
 
 		// created Deck of cards
@@ -27,11 +27,6 @@ public class DeckOfCards {
 			}
 
 		}
-		
-		//created deck of cards using LinkedList
-		for (int j = 0; j < 52; j++) {
-			
-		}
 
 		// shuffled using random function
 		for (int l = 0; l < deck.length; l++) {
@@ -40,10 +35,10 @@ public class DeckOfCards {
 		}
 
 		// giving each player 9 cards
-		i=0;
+		i = 0;
 		for (int j = 0; j < cardsOfPlayers.length; j++) {
 			for (int j2 = 0; j2 < cardsOfPlayers[j].length; j2++) {
-				cardsOfPlayers[j][j2]=deck[i];
+				cardsOfPlayers[j][j2] = deck[i];
 				i++;
 			}
 		}

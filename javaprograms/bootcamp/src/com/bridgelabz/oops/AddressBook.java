@@ -4,104 +4,160 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import org.codehaus.jackson.JsonParseException;
+import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 
-import com.bridgelabz.model.AdressbookModel;
-import com.bridgelabz.model.Karnataka;
-import com.bridgelabz.model.Kerala;
-import com.bridgelabz.model.Maharashtra;
+import com.bridgelabz.model.AddresBookModel;
+import com.bridgelabz.model.Person;
 import com.bridgelabz.model.State;
 import com.bridgelabz.utility.Utility;
 
 public class AddressBook {
-
-	public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException {
-		ObjectMapper mapper = new ObjectMapper();
-		String inFile = "/home/user/Desktop/vishnu/bridgelabzJavaPrograms/javaprograms/bootcamp/Files/json files/addressbookIn.json";
-
-		AdressbookModel model = new AdressbookModel();
-
-		// added states in Arraylist
-		model = mapper.readValue(new File(inFile), AdressbookModel.class);
-		ArrayList<AdressbookModel> adressbookModels = new ArrayList<AdressbookModel>();
-		System.out.println(model.getState().get(0).getStatename());
-
-		ArrayList<State> stateList = new ArrayList<State>();
-		stateList.addAll(model.getState());
-		ArrayList<Maharashtra> mahashtraList = new ArrayList<>();
-		mahashtraList.addAll(model.getState().get(0).getMaharashtra());
-		ArrayList<Karnataka> karnatakaList = new ArrayList<>();
-		karnatakaList.addAll(model.getState().get(1).getKarnataka());
-		ArrayList<Kerala> keralaList = new ArrayList<>();
-		keralaList.addAll(model.getState().get(2).getKerala());
-
-		// System.out.println("first contact is:");
-//		System.out.println(model.getState().get(0).getMaharashtra().get(0).getFirstName());
-
-		System.out.println(
-				"what do you want to do?\n1.Open a state Directory\n2.create a new state Directory\n3.save updated Address Book\n4.save updated Address book as\n5.Quit");
-		int response = Utility.intScan();
-		//System.out.println(stateList.get(0).get);
-		switch (response) {
-		case 1:
-			System.out.println("welcome Sir!!");
-			System.out.println("Which state directory you want to open?");
-			for (int i = 0; i < stateList.size(); i++) {
-				System.out.println((i+1)+". "+model.getState().get(i).getStatename());
-			}
-			int stateResponse = Utility.intScan();
-			boolean exit = false;
-			while (!exit) {
-				switch (stateResponse) {
-				case 1:
-					System.out.println("Welcome to Maharastra State AddressBook");
-					System.out.println(
-							"what do you want to do?\n1.add a person to AddressBook\n2.Edit Info of a person\n3.Delete a person\n4.sort AddressBook by lastName\n5.sort AddressBook by zipCode\n6.Print entries\n7.exit");
-					int response1 = Utility.intScan();
-					switch (response1) {
-					case 1:
-						Maharashtra maharashtra = new Maharashtra();
-						System.out.println("Enter the name");
-						String firstName = Utility.stringScan();
-						maharashtra.setFirstName(firstName);
-						System.out.println("Enter Last Name");
-						String lastName = Utility.stringScan();
-						maharashtra.setLastName(lastName);
-						System.out.println("Enter Address");
-						String address = Utility.stringScan();
-						maharashtra.setAddress(address);
-						System.out.println("Enter the city");
-						String city = Utility.stringScan();
-						maharashtra.setCity(city);
-						System.out.println("Enter the state");
-						String state = Utility.stringScan();
-						maharashtra.setState(state);
-						System.out.println("Enter your zip code");
-						String zip = Utility.stringScan();
-						maharashtra.setZip(zip);
-						String phoneNumber = Utility.stringScan();
-						System.out.println("Enter your phone Number");
-						maharashtra.setPhoneNumber(phoneNumber);
-						mahashtraList.add(maharashtra);
-						System.out.println("Person added Successfully");
-						System.out.println("do you want to exit?n\1.yes\n2.no");
-						int exitResponse = Utility.intScan();
-						if (exitResponse == 1) {
-							exit = true;
-							System.out.println("Exit!");
-						}
-
+	public static void main(String[] args) throws JsonGenerationException, JsonMappingException, IOException {
+		AddresBookModel model=new AddresBookModel();
+		ObjectMapper mapper=new ObjectMapper();
+		String fileOut="/home/user/Desktop/vishnu/bridgelabzJavaPrograms/javaprograms/bootcamp/Files/json files/addressbook.json";
+		 ArrayList<Person> persons=new ArrayList<Person>();
+		 ArrayList<Person> persons1=new ArrayList<Person>();
+		 ArrayList<State> states= new ArrayList<State>();
+		 State addressbook=new State();
+		 
+		 System.out.println("Welcome to address Book sir!");
+		 System.out.println("What do you want to do?\n1.create a new addressbook\n2.open an addressbook");
+		 int response=Utility.intScan();
+		 switch(response)
+		 {
+		 case 1:System.out.println("give a state name,kindly insert full name and in lowercase only");
+				String state1=Utility.stringScan();
+				boolean isFound=false;
+				
+				//searching in addressbook if the state is already available
+				for (int i = 0; i < states.size(); i++) {
+					String statesearch=model.getState().get(i).getStatename();
+					if(state1.equals(statesearch))
+					{
+						isFound=true;
+						System.out.println("This addressbook is already available,\nkindlyopen that addressbook");
 						break;
-					case 2:
 					}
-
+					
 				}
-			}
-
-		}
-
+				break;
+				
+				
+		 case 2://opening addressbook
+			 int addressbookPosition=0;
+			 System.out.println("give a state name,kindly insert full name and in lowercase only");
+				String statename=Utility.stringScan();
+				isFound=false;
+				//searching in addressbook if the state is already available
+				for (int i = 0; i < states.size(); i++) {
+					String statesearch=model.getState().get(i).getStatename();
+					if(statename.equals(statesearch))
+					{
+						isFound=true;
+						System.out.println("This addressbook is already available,\nkindlyopen that addressbook");
+						break;
+					}
+				}
+				if(!isFound)
+				{
+					State statenew=new State();
+					statenew.setStatename(state1);
+					System.out.println("Enter a firstname of the person");
+					String firstname=Utility.stringScan();
+					Person person=new Person();
+					person.setFirstname(firstname);
+					 System.out.println("Enter the last name");
+					 String lastname="shelke";
+					 person.setLastname(lastname);
+					 System.out.println("Enter the address");
+					 String address="radha krishna nagar";
+					 person.setAddress(address);
+					 System.out.println("Enter the city");
+					 String city="Latur";
+					 person.setCity(city);
+					 System.out.println("Enter the state");
+					statename="maharshtra";
+					 person.setState(statename);
+					 System.out.println("Enter the zip code");
+					 int zip=413512;
+					 person.setZip(zip);
+					 System.out.println("Enter mobile Number");
+					 String mobile="8180927857";
+					 person.setPhone(mobile);
+					 persons.add(person);
+					 System.out.println("Person added successfully in your new addressbook");
+					 statenew.setPerson(persons);
+					 states.add(statenew);	 
+				}
+		 }
+		 
+		 //inserting person in address book
+		 Person person=new Person();
+		 System.out.println("Enter the first name");
+		 String firstname="vishnu";
+		 person.setFirstname(firstname);
+		 System.out.println("Enter the last name");
+		 String lastname="shelke";
+		 person.setLastname(lastname);
+		 System.out.println("Enter the address");
+		 String address="radha krishna nagar";
+		 person.setAddress(address);
+		 System.out.println("Enter the city");
+		 String city="Latur";
+		 person.setCity(city);
+		 System.out.println("Enter the state");
+		 String statename="maharshtra";
+		 person.setState(statename);
+		 System.out.println("Enter the zip code");
+		 int zip=413512;
+		 person.setZip(zip);
+		 System.out.println("Enter mobile Number");
+		 String mobile="8180927857";
+		 person.setPhone(mobile);
+		 persons.add(person);
+		 
+		
+		 addressbook.setStatename(statename);
+		 addressbook.setPerson(persons);
+		states.add(addressbook);
+		model.setState(states);
+		
+		//adding addressbook
+		System.out.println("give a state name");
+		String state1=Utility.stringScan();
+		State state2=new State();
+		state2.setStatename(state1);
+		Person person1=new Person();
+		 System.out.println("Enter the first name");
+		 String firstname1="mahesh";
+		 person1.setFirstname(firstname1);
+		 System.out.println("Enter the last name");
+		 String lastname1="shelke";
+		 person1.setLastname(lastname1);
+		 System.out.println("Enter the address");
+		 String address1="radha krishs nagar";
+		 person1.setAddress(address1);
+		 System.out.println("Enter the city");
+		 String city1="gulbarga";
+		 person1.setCity(city1);
+		 System.out.println("Enter the state");
+		 String statename1="karnataka";
+		 person1.setState(statename1);
+		 System.out.println("Enter the zip code");
+		 int zip1=510245;
+		 person1.setZip(zip1);
+		 System.out.println("Enter mobile Number");
+		 String mobile1="9449864372";
+		 person1.setPhone(mobile1);
+		 persons1.add(person1);
+		 state2.setPerson(persons1);
+		 state2.setStatename(state1);
+		 states.add(state2);
+		 model.setState(states);
+		
+		mapper.writeValue(new File(fileOut), model);
 	}
-
 }
