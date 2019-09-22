@@ -17,24 +17,25 @@ public class OopsUtility {
 
 			}
 		}
-		for (int j = 0; j < player.length; j++) {
-			for (int j2 = 0; j2 < player.length; j2++) {
-				player[j].replaceAll("11", "jack");
-				player[j].replaceAll("12", "queen");
-				player[j].replaceAll("13", "king");
-				player[j].replaceAll("14", "ace");
-				player[j2].replaceAll("11", "jack");
-				player[j2].replaceAll("12", "queen");
-				player[j2].replaceAll("13", "king");
-				player[j2].replaceAll("14", "ace");
-			}
-		}
+		
 		return player;
 	}
 
-	public static void showCards(String[] player) {
+	public static void showCards(String[][] player) {
+		for (int j = 0; j < player.length; j++) {
+			for (int j2 = 0; j2 < player[j].length; j2++) {
+			player[j][j2] = player[j][j2].replaceAll("11", "jack");
+			player[j][j2] = player[j][j2].replaceAll("12", "queen");
+			player[j][j2] = player[j][j2].replaceAll("13", "king");
+			player[j][j2] = player[j][j2].replaceAll("14", "ace");
+			}
+		}
 		for (int i = 0; i < player.length; i++) {
-			System.out.print(player[i] + ",");
+			for (int j = 0; j < player[i].length; j++) {
+				System.out.print(player[i][j] + ",");
+			}
+			System.out.println();
+			System.out.println();
 		}
 	}
 
