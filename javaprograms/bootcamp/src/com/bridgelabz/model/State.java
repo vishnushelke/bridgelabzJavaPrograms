@@ -1,10 +1,11 @@
 package com.bridgelabz.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class State {
 	String statename;
-	List<Person> person;
+	ArrayList<Person> person;
 
 	public String getStatename() {
 		return statename;
@@ -14,11 +15,11 @@ public class State {
 		this.statename = statename;
 	}
 
-	public List<Person> getPerson() {
+	public ArrayList<Person> getPerson() {
 		return person;
 	}
 
-	public void setPerson(List<Person> person) {
+	public void setPerson(ArrayList<Person> person) {
 		this.person = person;
 	}
 
