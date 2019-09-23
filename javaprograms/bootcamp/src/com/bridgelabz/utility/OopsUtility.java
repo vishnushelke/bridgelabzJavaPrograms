@@ -4,7 +4,7 @@ public class OopsUtility {
 	public static String[] sortCards(String[] player) {
 		String temp = "";
 		for (int j = 0; j < player.length; j++) {
-			for (int j2 = 0; j2 < player.length; j2++) {
+			for (int j2 = j+1; j2 < player.length; j2++) {
 				int len1 = player[j].length() - 1;
 				int len2 = player[j2].length() - 1;
 				int n1 = player[j].charAt(len1) + (player[j].charAt(len1 - 1)) * 10;

@@ -30,8 +30,11 @@ public class DeckOfCards {
 
 		// shuffled using random function
 		for (int l = 0; l < deck.length; l++) {
+			String temp="";
 			int randomNumber = rand.nextInt(52);
+			temp=deck[randomNumber];
 			deck[randomNumber] = deck[51 - randomNumber];
+			deck[51 - randomNumber]=temp;
 		}
 
 		// giving each player 9 cards
@@ -49,6 +52,9 @@ public class DeckOfCards {
 
 		// Sorting and showing cards of each player
 		System.out.println("Cards of players after Sorting are :");
+		for (int j = 0; j < cardsOfPlayers.length; j++) {
+			OopsUtility.sortCards(cardsOfPlayers[j]);
+		}
 		OopsUtility.showCards(cardsOfPlayers);
 
 	}

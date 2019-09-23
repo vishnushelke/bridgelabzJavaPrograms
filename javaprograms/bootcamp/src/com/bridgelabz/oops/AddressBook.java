@@ -347,7 +347,6 @@ public class AddressBook {
 					exit = true;
 				}
 				statenew.setPerson(persons);
-				states.add(statenew);
 				model.setState(states);
 				break;
 
