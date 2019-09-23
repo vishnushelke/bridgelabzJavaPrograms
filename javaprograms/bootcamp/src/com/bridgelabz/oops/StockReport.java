@@ -10,7 +10,7 @@ import org.codehaus.jackson.map.ObjectMapper;
 
 import com.bridgelabz.model.StockModel;
 
-public class Stock {
+public class StockReport {
 
 	public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException {
 		
@@ -19,7 +19,7 @@ public class Stock {
 		ObjectMapper mapper=new ObjectMapper();
 		StockModel data=new StockModel();
 		data=mapper.readValue(new File(inString),StockModel.class);
-		ArrayList<Stock> list=new ArrayList<Stock>();
+		ArrayList<StockReport> list=new ArrayList<StockReport>();
 		
 		
 		System.out.println("Company name is :"+data.getStock().get(0).getStockName());

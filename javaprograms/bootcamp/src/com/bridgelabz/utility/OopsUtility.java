@@ -1,5 +1,7 @@
 package com.bridgelabz.utility;
 
+import com.bridgelabz.model.CustomerInfo;
+
 public class OopsUtility {
 	public static String[] sortCards(String[] player) {
 		String temp = "";
@@ -38,5 +40,25 @@ public class OopsUtility {
 			System.out.println();
 		}
 	}
+	
+	public static CustomerInfo createAccount()
+	{
+		CustomerInfo customer=new CustomerInfo();
+		System.out.println("Enter your name");
+		String name=Utility.stringScan();
+		customer.setName(name);
+		System.out.println("Enter your symbol,your name and ddmm of your date of birth");
+		String symbol=Utility.stringScan();
+		customer.setSymbol(symbol);
+		System.out.println("How many shares you have?");
+		int shares=Utility.intScan();
+		customer.setAvailableshares(shares);
+		System.out.println("how many ruppes you have for investment?");
+		int ruppes=Utility.intScan();
+		customer.setRupeesavailable(ruppes);
+		return customer;
+	}
+	
+	
 
 }
