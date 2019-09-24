@@ -1,8 +1,26 @@
 package com.bridgelabz.utility;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import org.codehaus.jackson.JsonGenerationException;
+import org.codehaus.jackson.map.JsonMappingException;
+import org.codehaus.jackson.map.ObjectMapper;
+
+import com.bridgelabz.model.Company;
+import com.bridgelabz.model.CompanySharesModel;
 import com.bridgelabz.model.CustomerInfo;
+import com.bridgelabz.model.CustomerInfoModel;
 
 public class OopsUtility {
+	
+	public static ObjectMapper mapper = new ObjectMapper();
+	public static CompanySharesModel modelCompanyShares = new CompanySharesModel();
+	public static CustomerInfoModel modelCustomers = new CustomerInfoModel();
+
+	public static ArrayList<Company> companies = new ArrayList<Company>();
+	public static ArrayList<CustomerInfo> customers = new ArrayList<CustomerInfo>();
 	public static String[] sortCards(String[] player) {
 		String temp = "";
 		for (int j = 0; j < player.length; j++) {
@@ -56,9 +74,72 @@ public class OopsUtility {
 		System.out.println("how many ruppes you have for investment?");
 		int ruppes=Utility.intScan();
 		customer.setRupeesavailable(ruppes);
+		System.out.println("creating a Customer...");
 		return customer;
 	}
 	
-	
+	public static CompanySharesModel startDataCompanies() throws JsonGenerationException, JsonMappingException, IOException
+	{
+		Company company = new Company();
+		company.setCompanyname("icici");
+		company.setNumberofshares(100);
+		company.setShareprice(50);
+		company.setSymbol("icici");
+		int totalprice = company.getShareprice() * company.getNumberofshares();
+		company.setTotalprice(totalprice);
+		companies.add(company);
 
+		// second company
+		Company company1 = new Company();
+		company1.setCompanyname("sbi");
+		company1.setNumberofshares(150);
+		company1.setShareprice(60);
+		company1.setSymbol("sbi");
+		int totalprice1 = company1.getShareprice() * company1.getNumberofshares();
+		company1.setTotalprice(totalprice1);
+		companies.add(company1);
+
+		// third company
+		Company company2 = new Company();
+		company2.setCompanyname("axis");
+		company2.setNumberofshares(200);
+		company2.setShareprice(90);
+		company2.setSymbol("axis");
+		int totalprice2 = company2.getShareprice() * company2.getNumberofshares();
+		company2.setTotalprice(totalprice2);
+		companies.add(company2);
+		modelCompanyShares.setCompanyshares(companies);
+		return modelCompanyShares;
+	}
+	public static CustomerInfoModel startDataCUdtomers()
+	{
+		// adding 3 customers
+				CustomerInfo customer = new CustomerInfo();
+				customer.setAvailableshares(50);
+				customer.setName("vishnu");
+				customer.setRupeesavailable(0);
+				customer.setSymbol("eater");
+				customers.add(customer);
+
+				CustomerInfo customer1 = new CustomerInfo();
+				customer1.setAvailableshares(60);
+				customer1.setName("rishi");
+				customer1.setRupeesavailable(1000);
+				customer1.setSymbol("rishi");
+				customers.add(customer1);
+
+				CustomerInfo customer2 = new CustomerInfo();
+				customer2.setAvailableshares(100);
+				customer2.setName("abhishek");
+				customer2.setRupeesavailable(200000);
+				customer2.setSymbol("cashier");
+				customers.add(customer2);
+				modelCustomers.setCustomers(customers);
+				return modelCustomers;
+	}
+	
+	public static void buyShares(int amount,String symbol)
+	{
+		
+	}
 }

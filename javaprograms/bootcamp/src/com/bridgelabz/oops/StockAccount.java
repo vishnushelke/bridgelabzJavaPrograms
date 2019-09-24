@@ -12,6 +12,7 @@ import com.bridgelabz.model.Company;
 import com.bridgelabz.model.CompanySharesModel;
 import com.bridgelabz.model.CustomerInfo;
 import com.bridgelabz.model.CustomerInfoModel;
+import com.bridgelabz.utility.OopsUtility;
 import com.bridgelabz.utility.Utility;
 
 public class StockAccount {
@@ -86,52 +87,122 @@ public class StockAccount {
 		mapper.writeValue(new File(
 				"/home/user/Desktop/vishnu/bridgelabzJavaPrograms/javaprograms/bootcamp/Files/json files/customers.json"),
 				modelCustomers);
-
-		
-		System.out.println("validate yourself");
-		for (int i = 0; i < customers.size(); i++) {
-			System.out.println((i+1)+". "+customers.get(i).getName());
-		}
-		int customerId=Utility.intScan();
-		customer=customers.get(customerId-1);
-		System.out.println("you have "+customer.getRupeesavailable()+" rupees");
-		System.out.println("which company shares you want to buy?");
-		for (int i = 0; i < companies.size(); i++) {
-			System.out.println((i + 1) + ". " + companies.get(i).getSymbol());
-		}
-		int response = Utility.intScan();
-		companies.get(response - 1);
-		System.out.println("this company has "+company.getNumberofshares()+" shares and shareprice "+company.getShareprice());
-		System.out.println("How many shares you wish to buy?");
-		response = Utility.intScan();
-		int sharesCompany = company.getNumberofshares();
-		while (response > sharesCompany || company.getShareprice()*response>customer.getRupeesavailable()) {
-			if(response > sharesCompany)
+		boolean exit=false;
+		while(!exit)
+		{
+			System.out.println("Welcome to the StockExchange!");
+			System.out.println("What do you want to do?\n1.create new account\n2.buy some shares\n3.sell your shares");
+			int action=Utility.intScan();
+			switch(action)
 			{
-				System.out.println("you can buy only " + sharesCompany + " shares,enter shares upto this value");
+			case 1://create an account
+				CustomerInfo customernew=new CustomerInfo();
+				customernew=OopsUtility.createAccount();
+				customers.add(customernew);
+				System.out.println("customer suuccessfully added!");
+				System.out.println("1.exit\n2.Be with us");
+				if(Utility.intScan()==1)
+				{
+					exit=true;
+				}
+				break;
+			case 2://buy shares
+				System.out.println("validate yourself");
+				for (int i = 0; i < customers.size(); i++) {
+					System.out.println((i+1)+". "+customers.get(i).getName());
+				}
+				int customerId=Utility.intScan();
+				customer=customers.get(customerId-1);
+				System.out.println("you have "+customer.getRupeesavailable()+" rupees");
+				System.out.println("which company shares you want to buy?");
+				for (int i = 0; i < companies.size(); i++) {
+					System.out.println((i + 1) + ". " + companies.get(i).getSymbol());
+				}
+				int response = Utility.intScan();
+				companies.get(response - 1);
+				System.out.println("this company has "+company.getNumberofshares()+" shares and shareprice "+company.getShareprice());
+				System.out.println("How many shares you wish to buy?");
 				response = Utility.intScan();
-			}
-			while(company.getShareprice()*response>customer.getRupeesavailable())
-			{
-				int moneyNeeded = company.getShareprice() * response;
-				while (customer.getRupeesavailable() < moneyNeeded) {
-					System.out.println("You dont have enough,enter valid number of shares");
-					response = Utility.intScan();
-					moneyNeeded = company.getShareprice() * response;
-			}
-			
+				int sharesCompany = company.getNumberofshares();
+				while (response > sharesCompany || company.getShareprice()*response>customer.getRupeesavailable()) {
+					if(response > sharesCompany)
+					{
+						System.out.println("you can buy only " + sharesCompany + " shares,enter shares upto this value");
+						response = Utility.intScan();
+					}
+					while(company.getShareprice()*response>customer.getRupeesavailable())
+					{
+						int moneyNeeded = company.getShareprice() * response;
+						while (customer.getRupeesavailable() < moneyNeeded) {
+							System.out.println("You dont have enough money,enter valid number of shares");
+							response = Utility.intScan();
+							moneyNeeded = company.getShareprice() * response;
+					}
+					
+					}
+				}
+				System.out.println("buying "+response+" shares from "+company.getCompanyname()+"...");
+				System.out.println("Shares bought successfully");
+				company.setNumberofshares(company.getNumberofshares() - response);
+				System.out.println("company remaining shares are "+company.getNumberofshares());
+				customer.setAvailableshares(customer.getAvailableshares() + response);
+				System.out.println("Your available shares are "+customer.getAvailableshares());
+				company.setTotalprice(company.getTotalprice() + response * company.getShareprice());
+				customer.setRupeesavailable(customer.getRupeesavailable() - response * company.getShareprice());
+				System.out.println("Money in your account is "+customer.getRupeesavailable());
+				
+				System.out.println("1.exit\n2.Be with us");
+				if(Utility.intScan()==1)
+				{
+					exit=true;
+				}
+		
+				break;
+			case 3://sell shares
+				System.out.println("validate yourself");
+				for (int i = 0; i < customers.size(); i++) {
+					System.out.println((i+1)+". "+customers.get(i).getName());
+				}
+				customerId=Utility.intScan();
+				customer=customers.get(customerId-1);
+				System.out.println("you have "+customer.getAvailableshares()+" shares");
+				System.out.println("select the companyshares you wish to sell");
+				for (int i = 0; i < companies.size(); i++) {
+					System.out.println((i+1)+". "+companies.get(i).getCompanyname());
+				}
+				int selectCompany=Utility.intScan();
+				company=companies.get(selectCompany-1);
+				System.out.println("this company sharePrice is "+company.getShareprice());
+				System.out.println("how many shares you wish to sell?");
+				int shareNumber=Utility.intScan();
+				while(shareNumber>customer.getAvailableshares()) {
+					System.out.println("you have only "+customer.getAvailableshares()+" in your account,enter valid number of shares to be sold");
+					shareNumber=Utility.intScan();
+				}
+				System.out.println("Selling "+shareNumber+" shares to "+company.getCompanyname()+" ...");
+				System.out.println("Shares sold successfully");
+				company.setNumberofshares(company.getNumberofshares() + shareNumber);
+				System.out.println("company remaining shares are "+company.getNumberofshares());
+				customer.setAvailableshares(customer.getAvailableshares() - shareNumber);
+				System.out.println("Your available shares are "+customer.getAvailableshares());
+				company.setTotalprice(company.getTotalprice() - shareNumber * company.getShareprice());
+				customer.setRupeesavailable(customer.getRupeesavailable() + shareNumber * company.getShareprice());
+				System.out.println("Money in your account is "+customer.getRupeesavailable());
+				
+				System.out.println("1.exit\n2.Be with us");
+				if(Utility.intScan()==1)
+				{
+					exit=true;
+				}
+				break;
+				
+				
+				default:System.out.println("enter valid input");
 			}
 		}
-		System.out.println("Buying " + response + " shares from " + company.getCompanyname());
-		company.setNumberofshares(company.getNumberofshares() - response);
-		System.out.println("company remaining shares are "+company.getNumberofshares());
-		customer.setAvailableshares(customer.getAvailableshares() + response);
-		System.out.println("Your available shares are "+customer.getAvailableshares());
-		company.setTotalprice(company.getTotalprice() + response * company.getShareprice());
+		System.out.println("Thanks for being with us!Have a good day!");
 		
-		customer.setRupeesavailable(customer.getRupeesavailable() - response * company.getShareprice());
-		System.out.println("Money in your account is "+customer.getRupeesavailable());
-		 
+		
 	}
 
 }
