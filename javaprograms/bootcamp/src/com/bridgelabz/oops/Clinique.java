@@ -44,7 +44,7 @@ public class Clinique {
 		doctorHeart.setAvailability("am");
 		doctorHeart.setId("heart");
 		doctorHeart.setIsfull(false);
-		doctorHeart.setName("dr. vaishnavi");
+		doctorHeart.setName("dr. ravi");
 		doctorHeart.setSpecialization("heart");
 		doctors.add(doctorHeart);
 
@@ -81,7 +81,9 @@ public class Clinique {
 		LocalDateTime now=LocalDateTime.now();
 		System.out.println("Enter number of patients");
 		int n=Utility.intScan();
-		for (int j = 0; j < n; j++) {
+		int j=0;
+		boolean exit=false;
+		while(j<n && !exit) {
 			
 				
 				System.out.println("welcome to the clinique,which specialist do you want?");
@@ -102,39 +104,42 @@ public class Clinique {
 					if (Utility.intScan() == 2) {
 						
 						System.out.println("Thank you for your valuable time");
-						return;
+						exit=true;
 					}
 				}
 				System.out.println("Doctor available for this slot is "+doctors.get(selectSpecialization).getName()+" Do you want to confirm your appointment?\n1.yes\n2.no");
-				if(Utility.intScan()==2)
+				if(Utility.intScan()==1)
 				{
-					System.out.println("thank you for your valuable time");
+					count[selectSpecialization]++;
+					Patient patient=new Patient();
+					System.out.println("Please give your name");
+					String name=Utility.stringScan();
+					patient.setName(name);
+					System.out.println("enter your age");
+					patient.setAge(Utility.intScan());
+					System.out.println("Enter your mobile number");
+					patient.setMobileNumber(Utility.stringScan());
+					System.out.println("your appointment is fixed with "+doctors.get(selectSpecialization).getName()+" have a good day");
+					patients.add(patient);
+					modelPatient.setPatients(patients);
+					Appointment appointment=new Appointment();
 					
-					return;
+					appointment.setAppointmentDate(dateformatter.format(now));
+					appointment.setDoctorName(doctors.get(selectSpecialization).getName());
+					appointment.setPatientName(name);
+					appointment.setSlot(slot);
+					appointments.add(appointment);
+					modelAppointment.setAppointments(appointments);
+					count[selectSpecialization]++;
 				}
+					j++;
+					System.out.println("Thank you for your valuable time");
+					Utility.bubbleNumberSort(count);
 				
-				count[selectSpecialization]++;
-				Patient patient=new Patient();
-				System.out.println("Please give your name");
-				String name=Utility.stringScan();
-				patient.setName(name);
-				System.out.println("enter your age");
-				patient.setAge(Utility.intScan());
-				System.out.println("Enter your mobile number");
-				patient.setMobileNumber(Utility.stringScan());
-				System.out.println("your appointment is fixed with "+doctors.get(selectSpecialization).getName()+" have a good day");
-				patients.add(patient);
-				modelPatient.setPatients(patients);
-				Appointment appointment=new Appointment();
 				
-				appointment.setAppointmentDate(dateformatter.format(now));
-				appointment.setDoctorName(doctors.get(selectSpecialization).getName());
-				appointment.setPatientName(name);
-				appointment.setSlot(slot);
-				appointments.add(appointment);
-				modelAppointment.setAppointments(appointments);
 			
 		}
+		System.out.println(doctors.get(count[count.length-1]).getSpecialization()+" is a popular specialization in hospital"+"\n"+doctors.get(count[count.length-1]).getName()+"is a popular doctor in hospital");
 		 mapper.writeValue(new File("/home/user/Desktop/vishnu/bridgelabzJavaPrograms/javaprograms/bootcamp/Files/json files/appointments.json"), modelAppointment);
 
 	}

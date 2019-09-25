@@ -1,66 +1,104 @@
 package com.bridgelabz.datastructure;
 
-public class Stack<T> {
-	
-	LinkedList<T> list=new LinkedList<T>();
-	int top,size,rear;
-	Node<T> head=list.head;
+import java.util.List;
 
-	public void push(T data)
-	{
-		list.insertAtStart(data);
-		size++;
+public class Stack<T> {
+	Object[] stack = new Object[6];
+	int top;
+
+	/**
+	 * Purpose: push the element into stack
+	 * 
+	 * @param data push data into stack
+	 */
+	public void push(Object data) {
+		if (isFull()) {
+			System.out.println("Stack is overflow");
+		} else {
+			stack[top] = data;
+			top++;
+		}
+
 	}
-	
-	public T pop()
-	{
+
+	/**
+	 * Purpose: this method will push all the object into linked list
+	 * 
+	 * @param list list of object is provided from user
+	 */
+	public void pushAll(List<T> list) {
+		for (int i = 0; i < list.size(); i++) {
+			push(list.get(i));
+		}
+
+	}
+
+	/**
+	 * Purpose: pop the element from stack
+	 * 
+	 * @return returns data which is popped
+	 */
+	public void pop() {
+
+		if (isEmpty()) {
+			System.out.println("Stack is underflow");
+		} else {
+			top--;
+			stack[top] = 0;
+
+		}
+
+	}
+
+	/**
+	 * Purpose: show top element of stack
+	 * 
+	 * @return returns top data
+	 */
+	@SuppressWarnings("unchecked")
+	public T peek() {
 		T data;
-		data=list.deleteAtStart();
+		data = (T) stack[top - 1];
 		return data;
 	}
-	public int size()
-	{
-		size=0;
-		Node<T> n=list.head;
-		while(n.next!=null)
-		{
-			size++;
-			n=n.next;
-		}
-		return size;
-	}
-	
-	public void show()
-	{
-		Node<T> n=list.head;
-		if(list.head==null)
-		{
-			System.out.println("Stack is Empty");
-		}
-		else
-		{
-		 
-			while(n!=null)
-			{
-				System.out.print(n.data+" ");
-				n=n.next;
-			}
-		
-		}
-	}
-	
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Stack<Integer> s=new Stack<Integer>();
-		s.push(1);
-		
-		s.push(23);
-		//s.pop();
-		System.out.println(s.pop());
 
-		
-		s.show();
+	/**
+	 * Purpose: check stack is empty or not
+	 * 
+	 * @return return true if empty else true
+	 */
+	public boolean isEmpty() {
+
+		return top == 0;
+	}
+
+	/**
+	 * Purpose: check stack is full or not
+	 * 
+	 * @return return true if full else true
+	 */
+	public boolean isFull() {
+
+		return top == stack.length;
+	}
+
+	/**
+	 * Purpose: show stack values
+	 */
+	public void show() {
+		for (Object num : stack) {
+			System.out.print(num + " ");
+		}
+		System.out.println();
+	}
+
+	/**
+	 * Purpose: check size of stack
+	 * 
+	 * @return return the top value
+	 */
+	public int size() {
+		return top;
 	}
 
 }
