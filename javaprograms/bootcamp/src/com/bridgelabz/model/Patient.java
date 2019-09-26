@@ -4,7 +4,7 @@ public class Patient {
 
 	private String name;
 	private String mobileNumber;
-	private int age;
+	private String ID;
 	public String getName() {
 		return name;
 	}
@@ -17,11 +17,15 @@ public class Patient {
 	public void setMobileNumber(String mobileNumber) {
 		this.mobileNumber = mobileNumber;
 	}
-	public int getAge() {
-		return age;
+	public String getID() {
+		return ID;
 	}
-	public void setAge(int age) {
-		this.age = age;
+	public void setID(String ID) {
+		this.ID = ID;
+	}
+	@Override
+	public String toString() {
+		return "Patient [name=" + name + ", mobileNumber=" + mobileNumber + ", ID=" + ID + "]";
 	}
 	
 }

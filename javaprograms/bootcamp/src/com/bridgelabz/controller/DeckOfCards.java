@@ -1,4 +1,4 @@
-package com.bridgelabz.oops;
+package com.bridgelabz.controller;
 
 import java.util.*;
 
@@ -30,11 +30,11 @@ public class DeckOfCards {
 
 		// shuffled using random function
 		for (int l = 0; l < deck.length; l++) {
-			String temp="";
+			String temp = "";
 			int randomNumber = rand.nextInt(52);
-			temp=deck[randomNumber];
+			temp = deck[randomNumber];
 			deck[randomNumber] = deck[51 - randomNumber];
-			deck[51 - randomNumber]=temp;
+			deck[51 - randomNumber] = temp;
 		}
 
 		// giving each player 9 cards
@@ -54,6 +54,13 @@ public class DeckOfCards {
 		System.out.println("Cards of players after Sorting are :");
 		for (int j = 0; j < cardsOfPlayers.length; j++) {
 			OopsUtility.sortCards(cardsOfPlayers[j]);
+		}
+		
+		
+		for (int j = 0; j < cardsOfPlayers.length; j++) {
+			for (int j2 = 0; j2 < cardsOfPlayers[i].length; j2++) {
+				
+			}
 		}
 		OopsUtility.showCards(cardsOfPlayers);
 

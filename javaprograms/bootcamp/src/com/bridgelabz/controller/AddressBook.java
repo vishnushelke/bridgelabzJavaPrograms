@@ -9,7 +9,7 @@
  *  @since   23-09-2019
  *
  ******************************************************************************/
-package com.bridgelabz.oops;
+package com.bridgelabz.controller;
 
 import java.io.File;
 import java.io.IOException;
@@ -36,6 +36,7 @@ public class AddressBook {
 		// first adding 2 addresses in addressbook
 		State statenew = new State();
 		statenew.setStatename("maharashtra");
+		
 
 		Person person = new Person();
 		String firstname = "vishnu";
@@ -167,6 +168,9 @@ public class AddressBook {
 					persons.add(person);
 					statenew.setPerson(persons);
 					states.add(statenew);
+					model.setState(states);
+					System.out.println(state1);
+					mapper.writeValue(new File("/home/user/Desktop/vishnu/bridgelabzJavaPrograms/javaprograms/bootcamp/Files/json files/"+state1+".json"), model);
 					System.out.println("Person added successfully in your new addressbook");
 					System.out.println("Do you want to add more person?\n1.yes\n2.no");
 					response = Utility.intScan();
@@ -227,7 +231,8 @@ public class AddressBook {
 					System.out.println("Person added successfully in your addressbook");
 					break;
 				
-				case 2:System.out.println("Enter the mobile number of the person you want to delete");
+				case 2://deleting using mobile number
+					System.out.println("Enter the mobile number of the person you want to delete");
 				 		int personPosition=0;
 				 		isFound=false;
 						mobile=Utility.stringScan();
@@ -252,7 +257,8 @@ public class AddressBook {
 				 		}
 				 		break;
 				 		
-				case 3:System.out.println("Enter the mobile number of the person you want to edit");
+				case 3://editing using mobile number
+					System.out.println("Enter the mobile number of the person you want to edit");
 				 		personPosition=0;
 				 		isFound=false;
 						mobile=Utility.stringScan();
@@ -307,35 +313,39 @@ public class AddressBook {
 				 		}
 				 		break;
 				 		
-				case 4: 
+				case 4: //sorting by lastname
 						for (int i = 0; i < persons.size(); i++) {
 							Person person6=persons.get(i);
 							for (int j = i+1; j < persons.size(); j++) {
 								Person person5=persons.get(j);
+								Person temp=persons.get(i);
 								if(person6.getLastname().compareTo(person5.getLastname())>0)
 								{
 									persons.set(i, person5);
-									persons.set(j, person6);
+									persons.set(j, temp);
 								}
 							}
 						}
 						System.out.println("AddressBook successfully sorted using LastName");
 						break;
 						
-				case 5:
+				case 5://sorting by zip
 					for (int i = 0; i < persons.size(); i++) {
 						Person person6=persons.get(i);
 						for (int j = i+1; j < persons.size(); j++) {
 							Person person5=persons.get(j);
+							Person temp=persons.get(i);
 							if(person6.getZip()>person5.getZip())
 							{
 								persons.set(i, person5);
-								persons.set(j, person6);
+								persons.set(j, temp);
 							}
 						}
 					}
 					System.out.println("AddressBook successfully sorted using LastName");
 					break;
+				case 6:System.out.println("addressbook printed to file");
+						break;
 				default:System.out.println("enter valid input");
 					
 		
@@ -348,7 +358,7 @@ public class AddressBook {
 				}
 				statenew.setPerson(persons);
 				model.setState(states);
-				break;
+				
 
 			}
 

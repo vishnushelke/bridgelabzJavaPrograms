@@ -12,6 +12,13 @@ public class AppointmentModel {
 	public void setAppointments(ArrayList<Appointment> appointments) {
 		this.appointments = appointments;
 	}
+
+	@Override
+	public String toString() {
+		return "AppointmentModel [appointments=" + appointments + ", getAppointments()=" + getAppointments()
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
+				+ "]";
+	}
 	
 
 }

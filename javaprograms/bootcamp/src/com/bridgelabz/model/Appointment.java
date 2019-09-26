@@ -30,5 +30,10 @@ public class Appointment {
 	public void setSlot(String slot) {
 		this.slot = slot;
 	}
+	@Override
+	public String toString() {
+		return "Appointment [patientName=" + patientName + ", doctorName=" + doctorName + ", appointmentDate="
+				+ appointmentDate + ", slot=" + slot + "]";
+	}
 	
 }

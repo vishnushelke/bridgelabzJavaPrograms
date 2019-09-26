@@ -13,5 +13,11 @@ public class PatientModel {
 	public void setPatients(ArrayList<Patient> patients) {
 		this.patients = patients;
 	}
+
+	@Override
+	public String toString() {
+		return "PatientModel [patients=" + patients + ", getPatients()=" + getPatients() + ", getClass()=" + getClass()
+				+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+	}
 	
 }

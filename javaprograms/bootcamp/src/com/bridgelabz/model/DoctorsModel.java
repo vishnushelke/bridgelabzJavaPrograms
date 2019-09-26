@@ -13,5 +13,11 @@ public class DoctorsModel {
 	public void setDoctors(ArrayList<Doctor> doctors) {
 		this.doctors = doctors;
 	}
+
+	@Override
+	public String toString() {
+		return "DoctorsModel [doctors=" + doctors + ", getDoctors()=" + getDoctors() + ", getClass()=" + getClass()
+				+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+	}
 	
 }

@@ -1,1 +1,16 @@
-{"appointments":[{"patientName":"vishnu","doctorName":"dr. vishnu","appointmentDate":"25/09/2019","slot":"am"},{"patientName":"brothers","doctorName":"dr. ravi","appointmentDate":"25/09/2019","slot":"am"}]}
+{
+	"appointments": [
+		{
+			"patientName": "rishi",
+			"doctorName": "dr. vishnu",
+			"appointmentDate": "26/09/2019",
+			"slot": "am"
+		},
+		{
+			"patientName": "abhi",
+			"doctorName": "dr. vishnu",
+			"appointmentDate": "26/09/2019",
+			"slot": "am"
+		}
+	]
+}

@@ -37,5 +37,12 @@ public class Doctor {
 	public void setIsfull(boolean isfull) {
 		this.isfull = isfull;
 	}
+	@Override
+	public String toString() {
+		return "Doctor [name=" + name + ", id=" + id + ", specialization=" + specialization + ", availability="
+				+ availability + ", isfull=" + isfull + ", getName()=" + getName() + ", getId()=" + getId()
+				+ ", getSpecialization()=" + getSpecialization() + ", getAvailability()=" + getAvailability()
+				+ ", getIsfull()=" + getIsfull() +  "]";
+	}
 	
 }
