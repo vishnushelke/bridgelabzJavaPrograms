@@ -1,11 +1,15 @@
 package com.bridgelabz.model;
 
+import java.util.ArrayList;
+
 public class Doctor {
 
 	private String name;
 	private String id;
 	private String specialization;
 	private String availability;
+	private int numberOfAppointments;
+	private ArrayList<Appointment> appointments;
 	private boolean isfull;
 	public String getName() {
 		return name;
@@ -37,12 +41,25 @@ public class Doctor {
 	public void setIsfull(boolean isfull) {
 		this.isfull = isfull;
 	}
+	
+	public int getNumberOfAppointments() {
+		return numberOfAppointments;
+	}
+	public void setNumberOfAppointments(int numberOfAppointments) {
+		this.numberOfAppointments = numberOfAppointments;
+	}
+	public ArrayList<Appointment> getAppointments() {
+		return appointments;
+	}
+	public void setAppointments(ArrayList<Appointment> appointments) {
+		this.appointments = appointments;
+	}
 	@Override
 	public String toString() {
 		return "Doctor [name=" + name + ", id=" + id + ", specialization=" + specialization + ", availability="
-				+ availability + ", isfull=" + isfull + ", getName()=" + getName() + ", getId()=" + getId()
-				+ ", getSpecialization()=" + getSpecialization() + ", getAvailability()=" + getAvailability()
-				+ ", getIsfull()=" + getIsfull() +  "]";
+				+ availability + ", numberOfAppointments=" + numberOfAppointments + ", appointments=" + appointments
+				+ ", isfull=" + isfull + "]";
 	}
+	
 	
 }

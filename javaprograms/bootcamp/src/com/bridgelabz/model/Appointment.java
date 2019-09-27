@@ -2,38 +2,39 @@ package com.bridgelabz.model;
 
 public class Appointment {
 
-	private String patientName;
-	private String doctorName;
-	private String appointmentDate;
-	private String slot;
-	public String getPatientName() {
-		return patientName;
+	private int appointmentnumber;
+	private Patient patient;
+	private Doctor doctor;
+	private String date;
+	public Patient getPatient() {
+		return patient;
 	}
-	public void setPatientName(String patientName) {
-		this.patientName = patientName;
+	public void setPatient(Patient patient) {
+		this.patient = patient;
 	}
-	public String getDoctorName() {
-		return doctorName;
+	
+	public int getAppointmentnumber() {
+		return appointmentnumber;
 	}
-	public void setDoctorName(String doctorName) {
-		this.doctorName = doctorName;
+	public void setAppointmentnumber(int appointmentnumber) {
+		this.appointmentnumber = appointmentnumber;
 	}
-	public String getAppointmentDate() {
-		return appointmentDate;
+	public Doctor getDoctor() {
+		return doctor;
 	}
-	public void setAppointmentDate(String appointmentDate) {
-		this.appointmentDate = appointmentDate;
+	public void setDoctor(Doctor doctor) {
+		this.doctor = doctor;
 	}
-	public String getSlot() {
-		return slot;
+	public String getDate() {
+		return date;
 	}
-	public void setSlot(String slot) {
-		this.slot = slot;
+	public void setDate(String date) {
+		this.date = date;
 	}
 	@Override
 	public String toString() {
-		return "Appointment [patientName=" + patientName + ", doctorName=" + doctorName + ", appointmentDate="
-				+ appointmentDate + ", slot=" + slot + "]";
+		return "Appointment [patient=" + patient + ", doctor=" + doctor + ", date=" + date + "]";
 	}
+	
 	
 }

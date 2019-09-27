@@ -9,6 +9,7 @@ import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 
+import com.bridgelabz.model.Appointment;
 import com.bridgelabz.model.Company;
 import com.bridgelabz.model.CompanySharesModel;
 import com.bridgelabz.model.CustomerInfo;
@@ -115,36 +116,9 @@ public class OopsUtility {
 		return modelCompanyShares;
 	}
 
-	public static CustomerInfoModel startDataCUdtomers() {
-		// adding 3 customers
-		CustomerInfo customer = new CustomerInfo();
-		customer.setAvailableshares(50);
-		customer.setName("vishnu");
-		customer.setRupeesavailable(0);
-		customer.setSymbol("eater");
-		customers.add(customer);
+	
 
-		CustomerInfo customer1 = new CustomerInfo();
-		customer1.setAvailableshares(60);
-		customer1.setName("rishi");
-		customer1.setRupeesavailable(1000);
-		customer1.setSymbol("rishi");
-		customers.add(customer1);
-
-		CustomerInfo customer2 = new CustomerInfo();
-		customer2.setAvailableshares(100);
-		customer2.setName("abhishek");
-		customer2.setRupeesavailable(200000);
-		customer2.setSymbol("cashier");
-		customers.add(customer2);
-		modelCustomers.setCustomers(customers);
-		return modelCustomers;
-	}
-
-	public static void buyShares(int amount, String symbol) {
-
-	}
-
+	
 	public static Doctor addDoctor(int doctorNumber) {
 
 		Doctor doctor = new Doctor();
@@ -159,10 +133,11 @@ public class OopsUtility {
 		return doctor;
 	}
 
-	public static Patient addPatient(int patientNumber, String name, String mobileNumber) {
+	public static Patient addPatient(int patientNumber, String name, String mobileNumber,int age) {
 		Patient patient = new Patient();
 
 		patient.setMobileNumber(mobileNumber);
+		patient.setAge(age);
 		patient.setName(name);
 		DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM");
 		LocalDateTime dateTimeNow = LocalDateTime.now();
@@ -240,5 +215,55 @@ public class OopsUtility {
 
 		return doctor;
 	}
+public static ArrayList<Patient> searchPatientByName(String name, ArrayList<Patient> patients) {
+		
+		ArrayList<Patient> patientsByName = new ArrayList<>();
+		for (int i = 0; i < patients.size(); i++) {
+			if (patients.get(i).getName().equals(name)) {
+
+				patientsByName.add(patients.get(i));
+			}
+
+		}
+
+		return patientsByName;
+	}
+
+public static ArrayList<Patient> searchPatientById(String Id, ArrayList<Patient> patients) {
+	ArrayList<Patient> patientsById = new ArrayList<>();
+	for (int i = 0; i < patients.size(); i++) {
+		if (patients.get(i).getID().equals(Id)) {
+
+			patientsById.add(patients.get(i));
+		}
+
+	}
+
+	return patientsById;
+}
+
+public static Patient searchPatientByMObile(String mobile, ArrayList<Patient> patients) {
+	Patient patient=new Patient();
+	for (int i = 0; i < patients.size(); i++) {
+		if(patients.get(i).getMobileNumber().equals(mobile))
+		{
+			patient=patients.get(i);
+			break;
+		}
+	}
+	return patient;
+}
+
+public static Appointment createAnAppointment(Patient patientAppointment, Doctor doctorForAppointment,ArrayList<Appointment> appointments) {
+	Appointment appointment=new Appointment();
+	int appointmentNumber=appointments.size()+1;
+	appointment.setDoctor(doctorForAppointment);
+	appointment.setPatient(patientAppointment);
+	appointment.setAppointmentnumber(appointmentNumber);
+	DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+	LocalDateTime dateTimeNow = LocalDateTime.now();
+	appointment.setDate(dateTimeNow.format(dateFormatter));
+	return appointment;
+}
 
 }

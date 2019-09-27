@@ -2,51 +2,37 @@
 	"doctors": [
 		{
 			"name": "dr. vishnu",
-			"id": "ent/1",
+			"id": "ent",
 			"specialization": "ent",
 			"availability": "am",
 			"isfull": false
 		},
 		{
 			"name": "dr. ravi",
-			"id": "heart/2",
+			"id": "heart",
 			"specialization": "heart",
 			"availability": "am",
 			"isfull": false
 		},
 		{
 			"name": "rishi",
-			"id": "homeopathy/3",
+			"id": "homeopathy",
 			"specialization": "homeopathy",
 			"availability": "am",
 			"isfull": false
 		},
 		{
 			"name": "abhishek",
-			"id": "physio/4",
+			"id": "physio",
 			"specialization": "physio",
 			"availability": "am",
 			"isfull": false
 		},
 		{
 			"name": "priyanka",
-			"id": "dentist/5",
+			"id": "dentist",
 			"specialization": "dentist",
 			"availability": "pm",
-			"isfull": false
-		},
-		{
-			"name": "vishnu",
-			"id": "eye/6",
-			"specialization": "eye",
-			"availability": "am",
-			"isfull": false
-		},
-		{
-			"name": "vishnu",
-			"id": "eye/7",
-			"specialization": "eye",
-			"availability": "am",
 			"isfull": false
 		}
 	]

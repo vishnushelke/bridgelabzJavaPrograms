@@ -5,6 +5,13 @@ public class Patient {
 	private String name;
 	private String mobileNumber;
 	private String ID;
+	private int age;
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
 	public String getName() {
 		return name;
 	}
@@ -25,7 +32,9 @@ public class Patient {
 	}
 	@Override
 	public String toString() {
-		return "Patient [name=" + name + ", mobileNumber=" + mobileNumber + ", ID=" + ID + "]";
+		return "Patient [name=" + name + ", mobileNumber=" + mobileNumber + ", ID=" + ID + ", age=" + age + "]";
 	}
+	
+	
 	
 }
