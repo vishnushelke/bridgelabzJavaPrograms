@@ -176,12 +176,6 @@ public class Clinique {
 //					doctors.forEach(i -> {
 //						System.out.println(i.getName()+"->> "+i.getSpecialization());
 //					});
-//					System.out.println("Enter doctor number if you want an appointment with him,\nelse enter 9 to exit");
-//					int selectDoctor=Utility.intScan();
-//					switch(selectDoctor)
-//					{
-//					
-//					}
 
 				} else {
 					System.out.println(doctorsBySpecialization);
@@ -254,15 +248,38 @@ public class Clinique {
 					appointment = OopsUtility.createAnAppointment(patientAppointment, doctorForAppointment,
 							appointments);
 					appointments.add(appointment);
-//					ArrayList<Appointment> doctorAppointments = new ArrayList<Appointment>();
-//					doctorAppointments.add(appointment);
-//					doctorForAppointment.setAppointments(doctorAppointments);
-//					doctorForAppointment.setNumberOfAppointments(doctorForAppointment.getNumberOfAppointments() + 1);
-//					mapper.writeValue(new File(
-//							"/home/user/Desktop/vishnu/bridgelabzJavaPrograms/javaprograms/bootcamp/Files/jsonfiles 2/doctors.json"),
-//							modelDoctor);
-					modelAppointment.setAppointments(appointments);
+					if(doctorForAppointment.getNumberOfAppointments()>4)
+					{
+						System.out.println("doctor has maximum number of appointments today.\nwould you like to have an appointment tomorrow?\n1.yes\n2.no");
+						if(Utility.intScan()==1)
+						{
+							DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+							LocalDateTime dateTimeNow = LocalDateTime.now();
+							LocalDateTime tomorrow = dateTimeNow.plusDays(1);
+							appointment.setDate(tomorrow.format(dateFormatter));
+						}
+						else
+						{
+							DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+							LocalDateTime dateTimeNow = LocalDateTime.now();
+							appointment.setDate(dateTimeNow.format(dateFormatter));
+						}
+					}
 					
+					ArrayList<Appointment> doctorAppointments = new ArrayList<Appointment>();
+					doctorAppointments.add(appointment);
+					doctorForAppointment.setAppointments(doctorAppointments);
+					doctorForAppointment.setNumberOfAppointments(doctorForAppointment.getNumberOfAppointments() + 1);
+					mapper.writeValue(new File(
+							"/home/user/Desktop/vishnu/bridgelabzJavaPrograms/javaprograms/bootcamp/Files/jsonfiles 2/doctorsout.json"),
+							modelDoctor);
+					modelAppointment.setAppointments(appointments);
+					patientAppointment.setAppointment(appointment);
+					
+					modelPatient.setPatients(patients);
+					mapper.writeValue(new File(
+							"/home/user/Desktop/vishnu/bridgelabzJavaPrograms/javaprograms/bootcamp/Files/jsonfiles 2/patients.json"),
+							modelPatient);
 					mapper.writeValue(new File("/home/user/Desktop/vishnu/bridgelabzJavaPrograms/javaprograms/bootcamp/Files/jsonfiles 2/appointments.json"), modelAppointment);
 					
 					System.out.println("Your apppointment is fixed with " + doctorForAppointment.getName());
@@ -271,10 +288,32 @@ public class Clinique {
 				} else {
 					exit = true;
 				}
-
+				break;
+			case 6://printing report of a doctor
+				System.out.println("Enter your ID");
+				Doctor doctorReport=OopsUtility.searchDoctorByID(Utility.stringScan(), doctors);
+				if(doctorReport.getName()==null)
+					System.out.println("Doctor not found");
+				else
+					System.out.println(doctorReport);
+				break;
+			case 7://printing report of a patient
+				System.out.println("Enter your Mobile");
+				Patient patientReport=OopsUtility.searchPatientByMObile(Utility.stringScan(), patients);
+				if(patientReport.getName()==null)
+					System.out.println("Doctor not found");
+				else
+					System.out.println(patientReport);
+				break;
+			case 8://printing popular doctor
+				OopsUtility.showPopularDoctor(doctors);
+				break;
+			case 9://printing popular specialization
+				OopsUtility.showPopularSpecialization(doctors);
+				break;
 			}
 		}
-
+		System.out.println("Thank you for being with us!");
 	}
 
 }

@@ -5,6 +5,18 @@
 			"id": "ent/1",
 			"specialization": "ent",
 			"availability": "am",
+			"numberOfAppointments": 6,
+			"appointments": [
+				{
+					"appointmentnumber": 6,
+					"patientName": "kjdkjfh",
+					"patientId": "Patient 27/09/6",
+					"doctorName": "dr. vishnu",
+					"doctorId": "ent/1",
+					"slot": "am",
+					"date": "28/09/2019"
+				}
+			],
 			"isfull": false
 		},
 		{
@@ -12,6 +24,8 @@
 			"id": "heart/1",
 			"specialization": "heart",
 			"availability": "am",
+			"numberOfAppointments": 0,
+			"appointments": null,
 			"isfull": false
 		},
 		{
@@ -19,6 +33,8 @@
 			"id": "homeopathy/1",
 			"specialization": "homeopathy",
 			"availability": "am",
+			"numberOfAppointments": 0,
+			"appointments": null,
 			"isfull": false
 		},
 		{
@@ -26,6 +42,8 @@
 			"id": "physio/1",
 			"specialization": "physio",
 			"availability": "am",
+			"numberOfAppointments": 0,
+			"appointments": null,
 			"isfull": false
 		},
 		{
@@ -33,6 +51,8 @@
 			"id": "dentist/1",
 			"specialization": "dentist",
 			"availability": "pm",
+			"numberOfAppointments": 0,
+			"appointments": null,
 			"isfull": false
 		}
 	]

@@ -6,6 +6,13 @@ public class Patient {
 	private String mobileNumber;
 	private String ID;
 	private int age;
+	private Appointment appointment;
+	public Appointment getAppointment() {
+		return appointment;
+	}
+	public void setAppointment(Appointment appointment) {
+		this.appointment = appointment;
+	}
 	public int getAge() {
 		return age;
 	}
@@ -32,7 +39,8 @@ public class Patient {
 	}
 	@Override
 	public String toString() {
-		return "Patient [name=" + name + ", mobileNumber=" + mobileNumber + ", ID=" + ID + ", age=" + age + "]";
+		return "Patient [name=" + name + ", mobileNumber=" + mobileNumber + ", ID=" + ID + ", age=" + age
+				+ ", appointment=" + appointment + "]";
 	}
 	
 	

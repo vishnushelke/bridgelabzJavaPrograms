@@ -128,7 +128,7 @@ public class OopsUtility {
 		doctor.setAvailability(Utility.stringScan());
 		System.out.println("Give your specialization");
 		doctor.setSpecialization(Utility.stringScan());
-		doctor.setIsfull(false);
+		
 		doctor.setId(doctor.getSpecialization() + "/" + doctorNumber);
 		return doctor;
 	}
@@ -257,13 +257,48 @@ public static Patient searchPatientByMObile(String mobile, ArrayList<Patient> pa
 public static Appointment createAnAppointment(Patient patientAppointment, Doctor doctorForAppointment,ArrayList<Appointment> appointments) {
 	Appointment appointment=new Appointment();
 	int appointmentNumber=appointments.size()+1;
-	appointment.setDoctor(doctorForAppointment);
-	appointment.setPatient(patientAppointment);
 	appointment.setAppointmentnumber(appointmentNumber);
-	DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-	LocalDateTime dateTimeNow = LocalDateTime.now();
-	appointment.setDate(dateTimeNow.format(dateFormatter));
+	appointment.setDoctorId(doctorForAppointment.getId());
+	appointment.setDoctorName(doctorForAppointment.getName());
+	appointment.setPatientId(patientAppointment.getID());
+	appointment.setPatientName(patientAppointment.getName());
+	appointment.setSlot(doctorForAppointment.getAvailability());
 	return appointment;
+}
+
+public static void showPopularDoctor(ArrayList<Doctor> doctors) {
+	for (int i = 0; i < doctors.size(); i++) {
+		Doctor doctor=doctors.get(i);
+		for (int j = i+1; j < doctors.size(); j++) {
+			Doctor doctornew=doctors.get(j);
+			Doctor obj=doctornew;
+			if(doctor.getNumberOfAppointments()>doctor.getNumberOfAppointments())
+			{
+				doctors.set(j, doctor);
+				doctors.set(i, obj);
+			}
+		}
+		
+	}
+	System.out.println("Popular doctor is "+doctors.get(0).getName());
+}
+
+public static void showPopularSpecialization(ArrayList<Doctor> doctors) {
+	for (int i = 0; i < doctors.size(); i++) {
+		Doctor doctor=doctors.get(i);
+		for (int j = i+1; j < doctors.size(); j++) {
+			Doctor doctornew=doctors.get(j);
+			Doctor obj=doctornew;
+			if(doctor.getNumberOfAppointments()>doctor.getNumberOfAppointments())
+			{
+				doctors.set(j, doctor);
+				doctors.set(i, obj);
+			}
+		}
+		
+	}
+	System.out.println("Popular Specialization is "+doctors.get(0).getSpecialization());
+	
 }
 
 }

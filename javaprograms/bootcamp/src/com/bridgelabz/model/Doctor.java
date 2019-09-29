@@ -10,7 +10,7 @@ public class Doctor {
 	private String availability;
 	private int numberOfAppointments;
 	private ArrayList<Appointment> appointments;
-	private boolean isfull;
+	
 	public String getName() {
 		return name;
 	}
@@ -35,13 +35,7 @@ public class Doctor {
 	public void setAvailability(String availability) {
 		this.availability = availability;
 	}
-	public boolean getIsfull() {
-		return isfull;
-	}
-	public void setIsfull(boolean isfull) {
-		this.isfull = isfull;
-	}
-	
+
 	public int getNumberOfAppointments() {
 		return numberOfAppointments;
 	}
@@ -58,8 +52,9 @@ public class Doctor {
 	public String toString() {
 		return "Doctor [name=" + name + ", id=" + id + ", specialization=" + specialization + ", availability="
 				+ availability + ", numberOfAppointments=" + numberOfAppointments + ", appointments=" + appointments
-				+ ", isfull=" + isfull + "]";
+				+ "]";
 	}
+	
 	
 	
 }
